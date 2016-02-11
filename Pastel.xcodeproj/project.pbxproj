@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
+		79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04C1C6CD54700F7264F /* ViewController.swift */; };
+		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
+		79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A0501C6CD54700F7264F /* Main.storyboard */; };
+		79F0A05D1C6CD54700F7264F /* PastelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A05C1C6CD54700F7264F /* PastelTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79F0A0591C6CD54700F7264F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79F0A03F1C6CD54700F7264F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F0A0461C6CD54700F7264F;
+			remoteInfo = Pastel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79F0A0471C6CD54700F7264F /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F0A04A1C6CD54700F7264F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79F0A04C1C6CD54700F7264F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79F0A04E1C6CD54700F7264F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79F0A0511C6CD54700F7264F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79F0A0531C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F0A0581C6CD54700F7264F /* PastelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PastelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F0A05C1C6CD54700F7264F /* PastelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastelTests.swift; sourceTree = "<group>"; };
+		79F0A05E1C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79F0A0441C6CD54700F7264F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F0A0551C6CD54700F7264F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79F0A03E1C6CD54700F7264F = {
+			isa = PBXGroup;
+			children = (
+				79F0A0491C6CD54700F7264F /* Pastel */,
+				79F0A05B1C6CD54700F7264F /* PastelTests */,
+				79F0A0481C6CD54700F7264F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79F0A0481C6CD54700F7264F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79F0A0471C6CD54700F7264F /* Pastel.app */,
+				79F0A0581C6CD54700F7264F /* PastelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79F0A0491C6CD54700F7264F /* Pastel */ = {
+			isa = PBXGroup;
+			children = (
+				79F0A04A1C6CD54700F7264F /* AppDelegate.swift */,
+				79F0A04C1C6CD54700F7264F /* ViewController.swift */,
+				79F0A04E1C6CD54700F7264F /* Assets.xcassets */,
+				79F0A0501C6CD54700F7264F /* Main.storyboard */,
+				79F0A0531C6CD54700F7264F /* Info.plist */,
+			);
+			path = Pastel;
+			sourceTree = "<group>";
+		};
+		79F0A05B1C6CD54700F7264F /* PastelTests */ = {
+			isa = PBXGroup;
+			children = (
+				79F0A05C1C6CD54700F7264F /* PastelTests.swift */,
+				79F0A05E1C6CD54700F7264F /* Info.plist */,
+			);
+			path = PastelTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79F0A0461C6CD54700F7264F /* Pastel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F0A0611C6CD54700F7264F /* Build configuration list for PBXNativeTarget "Pastel" */;
+			buildPhases = (
+				79F0A0431C6CD54700F7264F /* Sources */,
+				79F0A0441C6CD54700F7264F /* Frameworks */,
+				79F0A0451C6CD54700F7264F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pastel;
+			productName = Pastel;
+			productReference = 79F0A0471C6CD54700F7264F /* Pastel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79F0A0571C6CD54700F7264F /* PastelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79F0A0641C6CD54700F7264F /* Build configuration list for PBXNativeTarget "PastelTests" */;
+			buildPhases = (
+				79F0A0541C6CD54700F7264F /* Sources */,
+				79F0A0551C6CD54700F7264F /* Frameworks */,
+				79F0A0561C6CD54700F7264F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79F0A05A1C6CD54700F7264F /* PBXTargetDependency */,
+			);
+			name = PastelTests;
+			productName = PastelTests;
+			productReference = 79F0A0581C6CD54700F7264F /* PastelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79F0A03F1C6CD54700F7264F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Sendy Halim";
+				TargetAttributes = {
+					79F0A0461C6CD54700F7264F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					79F0A0571C6CD54700F7264F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 79F0A0461C6CD54700F7264F;
+					};
+				};
+			};
+			buildConfigurationList = 79F0A0421C6CD54700F7264F /* Build configuration list for PBXProject "Pastel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79F0A03E1C6CD54700F7264F;
+			productRefGroup = 79F0A0481C6CD54700F7264F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79F0A0461C6CD54700F7264F /* Pastel */,
+				79F0A0571C6CD54700F7264F /* PastelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79F0A0451C6CD54700F7264F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */,
+				79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F0A0561C6CD54700F7264F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79F0A0431C6CD54700F7264F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */,
+				79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F0A0541C6CD54700F7264F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79F0A05D1C6CD54700F7264F /* PastelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79F0A05A1C6CD54700F7264F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F0A0461C6CD54700F7264F /* Pastel */;
+			targetProxy = 79F0A0591C6CD54700F7264F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79F0A0501C6CD54700F7264F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79F0A0511C6CD54700F7264F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79F0A05F1C6CD54700F7264F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		79F0A0601C6CD54700F7264F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		79F0A0621C6CD54700F7264F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Pastel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Pastel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		79F0A0631C6CD54700F7264F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Pastel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Pastel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		79F0A0651C6CD54700F7264F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PastelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pastel.app/Contents/MacOS/Pastel";
+			};
+			name = Debug;
+		};
+		79F0A0661C6CD54700F7264F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = PastelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pastel.app/Contents/MacOS/Pastel";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79F0A0421C6CD54700F7264F /* Build configuration list for PBXProject "Pastel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F0A05F1C6CD54700F7264F /* Debug */,
+				79F0A0601C6CD54700F7264F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F0A0611C6CD54700F7264F /* Build configuration list for PBXNativeTarget "Pastel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F0A0621C6CD54700F7264F /* Debug */,
+				79F0A0631C6CD54700F7264F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		79F0A0641C6CD54700F7264F /* Build configuration list for PBXNativeTarget "PastelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79F0A0651C6CD54700F7264F /* Debug */,
+				79F0A0661C6CD54700F7264F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79F0A03F1C6CD54700F7264F /* Project object */;
+}
