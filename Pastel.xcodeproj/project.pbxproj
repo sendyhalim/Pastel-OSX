@@ -15,6 +15,7 @@
 		79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */; };
 		79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06F1C6CDCA200F7264F /* RxSwift.framework */; };
 		79F0A0731C6CDD8E00F7264F /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */; };
+		79F0A0751C6CDE6000F7264F /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A0741C6CDE6000F7264F /* PasteboardService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
 		79F0A06F1C6CDCA200F7264F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
 		79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
+		79F0A0741C6CDE6000F7264F /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				79F0A0501C6CD54700F7264F /* Main.storyboard */,
 				79F0A0531C6CD54700F7264F /* Info.plist */,
 				79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */,
+				79F0A0741C6CDE6000F7264F /* PasteboardService.swift */,
 			);
 			path = Pastel;
 			sourceTree = "<group>";
@@ -122,7 +125,8 @@
 				79F0A0431C6CD54700F7264F /* Sources */,
 				79F0A0441C6CD54700F7264F /* Frameworks */,
 				79F0A0451C6CD54700F7264F /* Resources */,
-				79F0A06B1C6CDB9700F7264F /* [Carthage] Copy Frameworks */,
+				79F0A06B1C6CDB9700F7264F /* [Run Script - Carthage] Copy Frameworks */,
+				79F0A0761C6CDEDB00F7264F /* [Run Script - Swiftlint] Lint */,
 			);
 			buildRules = (
 			);
@@ -209,7 +213,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		79F0A06B1C6CDB9700F7264F /* [Carthage] Copy Frameworks */ = {
+		79F0A06B1C6CDB9700F7264F /* [Run Script - Carthage] Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,12 +222,26 @@
 				"$(SRCROOT)/Carthage/Build/Mac/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/RxCocoa.framework",
 			);
-			name = "[Carthage] Copy Frameworks";
+			name = "[Run Script - Carthage] Copy Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/usr/local/bin/carthage copy-frameworks";
 			shellScript = "";
+		};
+		79F0A0761C6CDEDB00F7264F /* [Run Script - Swiftlint] Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[Run Script - Swiftlint] Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -232,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F0A0751C6CDE6000F7264F /* PasteboardService.swift in Sources */,
 				79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */,
 				79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */,
 				79F0A0731C6CDD8E00F7264F /* PasteboardItem.swift in Sources */,

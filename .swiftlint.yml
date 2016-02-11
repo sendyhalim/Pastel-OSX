@@ -1,0 +1,11 @@
+disabled_rules:
+  - variable_name
+  - force_cast
+  - function_body_length
+included:
+  - Pastel
+  - PastelTests
+excluded: # paths to ignore during linting. overridden by `included`.
+  - Carthage
+  - Pods
+  - R.generated.swift
