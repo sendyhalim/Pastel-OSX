@@ -14,6 +14,7 @@
 		79F0A05D1C6CD54700F7264F /* PastelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A05C1C6CD54700F7264F /* PastelTests.swift */; };
 		79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */; };
 		79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06F1C6CDCA200F7264F /* RxSwift.framework */; };
+		79F0A0731C6CDD8E00F7264F /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		79F0A05E1C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
 		79F0A06F1C6CDCA200F7264F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				79F0A04E1C6CD54700F7264F /* Assets.xcassets */,
 				79F0A0501C6CD54700F7264F /* Main.storyboard */,
 				79F0A0531C6CD54700F7264F /* Info.plist */,
+				79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */,
 			);
 			path = Pastel;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */,
 				79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */,
+				79F0A0731C6CDD8E00F7264F /* PasteboardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
