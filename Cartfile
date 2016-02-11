@@ -1,3 +1,4 @@
 github "ReactiveX/RxSwift" "master"
+github "typelift/Swiftz" "master"
 github "Quick/Quick" "master"
 github "Quick/Nimble" "master"

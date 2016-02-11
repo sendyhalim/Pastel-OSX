@@ -1,3 +1,4 @@
 github "Quick/Nimble" "1a64a3fd9cc9d7ca031a94324df4368b07df5de6"
 github "Quick/Quick" "2f037560be197f0f5ae992512549bc29fabb3818"
 github "ReactiveX/RxSwift" "cf06a2075082a4dae23d90aad2eb680263f9ac94"
+github "typelift/Swiftz" "2dfc7a07d6862e50bcbce8b5e7db555094cc8b46"
