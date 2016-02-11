@@ -12,8 +12,8 @@
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
 		79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A0501C6CD54700F7264F /* Main.storyboard */; };
 		79F0A05D1C6CD54700F7264F /* PastelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A05C1C6CD54700F7264F /* PastelTests.swift */; };
-		79F0A0681C6CDB7E00F7264F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A0671C6CDB7E00F7264F /* RxSwift.framework */; };
-		79F0A06A1C6CDB8B00F7264F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A0691C6CDB8B00F7264F /* RxCocoa.framework */; };
+		79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */; };
+		79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06F1C6CDCA200F7264F /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 		79F0A0581C6CD54700F7264F /* PastelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PastelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A05C1C6CD54700F7264F /* PastelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastelTests.swift; sourceTree = "<group>"; };
 		79F0A05E1C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79F0A0671C6CDB7E00F7264F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
-		79F0A0691C6CDB8B00F7264F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		79F0A06F1C6CDCA200F7264F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,8 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F0A0681C6CDB7E00F7264F /* RxSwift.framework in Frameworks */,
-				79F0A06A1C6CDB8B00F7264F /* RxCocoa.framework in Frameworks */,
+				79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */,
+				79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +63,7 @@
 		79F0A03E1C6CD54700F7264F = {
 			isa = PBXGroup;
 			children = (
-				79F0A0691C6CDB8B00F7264F /* RxCocoa.framework */,
-				79F0A0671C6CDB7E00F7264F /* RxSwift.framework */,
+				79F0A06D1C6CDC9000F7264F /* Frameworks */,
 				79F0A0491C6CD54700F7264F /* Pastel */,
 				79F0A05B1C6CD54700F7264F /* PastelTests */,
 				79F0A0481C6CD54700F7264F /* Products */,
@@ -99,6 +98,15 @@
 				79F0A05E1C6CD54700F7264F /* Info.plist */,
 			);
 			path = PastelTests;
+			sourceTree = "<group>";
+		};
+		79F0A06D1C6CDC9000F7264F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */,
+				79F0A06F1C6CDCA200F7264F /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
