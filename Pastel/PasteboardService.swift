@@ -49,6 +49,23 @@ class PasteboardService {
     return Optional.None
   }
 
+  func addItemToPasteboard(item: PasteboardItem) {
+    pasteboard.clearContents()
+
+    switch item {
+    case .Text(let string):
+      pasteboard.writeObjects([string as NSPasteboardWriting])
+
+    case .URL(let url):
+      pasteboard.writeObjects([url as NSPasteboardWriting])
+
+    case .Image(let img):
+      pasteboard.writeObjects([img as NSPasteboardWriting])
+    }
+
+    pollPasteboardItems()
+  }
+
   private func addPasteboardItem(item: PasteboardItem) {
     pasteboardItems.value = pasteboardItems.value.filter {
       $0 != item
