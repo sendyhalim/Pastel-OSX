@@ -10,7 +10,7 @@ import Cocoa
 import RxSwift
 import Swiftz
 
-class PasteboardService {
+struct PasteboardService {
   let pasteboard = NSPasteboard.generalPasteboard()
   let pasteboardItems = Variable([PasteboardItem]())
   let changeCount = Variable(0)
@@ -21,16 +21,12 @@ class PasteboardService {
       return
     }
 
-    let _items = pasteboard.readObjectsForClasses(
+    let items = pasteboard.readObjectsForClasses(
       [NSString.self, NSImage.self, NSURL.self],
       options: nil
     )
 
-    guard let items = _items where items.count > 0 else {
-        return
-    }
-
-    items.first >>- pasteboardItem >>- addPasteboardItem
+    items?.first >>- pasteboardItem >>- addPasteboardItem
   }
 
   func pasteboardItem(item: AnyObject) -> PasteboardItem? {
