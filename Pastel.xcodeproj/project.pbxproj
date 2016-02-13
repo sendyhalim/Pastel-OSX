@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794215901C6F21B900A5AFBB /* Swiftz.framework */; };
 		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
 		79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04C1C6CD54700F7264F /* ViewController.swift */; };
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		794215901C6F21B900A5AFBB /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/Mac/Swiftz.framework; sourceTree = "<group>"; };
 		79F0A0471C6CD54700F7264F /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A04A1C6CD54700F7264F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F0A04C1C6CD54700F7264F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			files = (
 				79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */,
 				79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */,
+				794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +112,7 @@
 		79F0A06D1C6CDC9000F7264F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				794215901C6F21B900A5AFBB /* Swiftz.framework */,
 				79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */,
 				79F0A06F1C6CDCA200F7264F /* RxSwift.framework */,
 			);
@@ -221,6 +225,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Swiftz.framework",
 			);
 			name = "[Run Script - Carthage] Copy Frameworks";
 			outputPaths = (
@@ -444,6 +449,7 @@
 				79F0A0631C6CD54700F7264F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79F0A0641C6CD54700F7264F /* Build configuration list for PBXNativeTarget "PastelTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +458,7 @@
 				79F0A0661C6CD54700F7264F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
