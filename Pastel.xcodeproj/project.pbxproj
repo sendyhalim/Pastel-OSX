@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794215901C6F21B900A5AFBB /* Swiftz.framework */; };
+		79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */; };
+		79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */; };
 		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
 		79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04C1C6CD54700F7264F /* ViewController.swift */; };
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
@@ -15,8 +17,6 @@
 		79F0A05D1C6CD54700F7264F /* PastelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A05C1C6CD54700F7264F /* PastelTests.swift */; };
 		79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */; };
 		79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06F1C6CDCA200F7264F /* RxSwift.framework */; };
-		79F0A0731C6CDD8E00F7264F /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */; };
-		79F0A0751C6CDE6000F7264F /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A0741C6CDE6000F7264F /* PasteboardService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		794215901C6F21B900A5AFBB /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/Mac/Swiftz.framework; sourceTree = "<group>"; };
+		79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
+		79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		79F0A0471C6CD54700F7264F /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A04A1C6CD54700F7264F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F0A04C1C6CD54700F7264F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		79F0A05E1C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
 		79F0A06F1C6CDCA200F7264F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
-		79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
-		79F0A0741C6CDE6000F7264F /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79D2C17B1C70DF8D00DEA273 /* Pasteboard */ = {
+			isa = PBXGroup;
+			children = (
+				79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */,
+				79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */,
+			);
+			path = Pasteboard;
+			sourceTree = "<group>";
+		};
 		79F0A03E1C6CD54700F7264F = {
 			isa = PBXGroup;
 			children = (
@@ -89,13 +98,12 @@
 		79F0A0491C6CD54700F7264F /* Pastel */ = {
 			isa = PBXGroup;
 			children = (
+				79D2C17B1C70DF8D00DEA273 /* Pasteboard */,
 				79F0A04A1C6CD54700F7264F /* AppDelegate.swift */,
 				79F0A04C1C6CD54700F7264F /* ViewController.swift */,
 				79F0A04E1C6CD54700F7264F /* Assets.xcassets */,
 				79F0A0501C6CD54700F7264F /* Main.storyboard */,
 				79F0A0531C6CD54700F7264F /* Info.plist */,
-				79F0A0721C6CDD8E00F7264F /* PasteboardItem.swift */,
-				79F0A0741C6CDE6000F7264F /* PasteboardService.swift */,
 			);
 			path = Pastel;
 			sourceTree = "<group>";
@@ -255,10 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F0A0751C6CDE6000F7264F /* PasteboardService.swift in Sources */,
+				79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */,
 				79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */,
 				79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */,
-				79F0A0731C6CDD8E00F7264F /* PasteboardItem.swift in Sources */,
+				79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
