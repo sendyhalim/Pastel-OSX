@@ -10,6 +10,8 @@
 		794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794215901C6F21B900A5AFBB /* Swiftz.framework */; };
 		79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */; };
 		79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */; };
+		79D2C1811C70E01A00DEA273 /* PasteboardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */; };
+		79D2C1841C70E2BD00DEA273 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1831C70E2BD00DEA273 /* Function.swift */; };
 		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
 		79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04C1C6CD54700F7264F /* ViewController.swift */; };
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		794215901C6F21B900A5AFBB /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/Mac/Swiftz.framework; sourceTree = "<group>"; };
 		79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
+		79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardListViewModel.swift; sourceTree = "<group>"; };
+		79D2C1831C70E2BD00DEA273 /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		79F0A0471C6CD54700F7264F /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A04A1C6CD54700F7264F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F0A04C1C6CD54700F7264F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,8 +76,17 @@
 			children = (
 				79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */,
 				79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */,
+				79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */,
 			);
 			path = Pasteboard;
+			sourceTree = "<group>";
+		};
+		79D2C1821C70E2B300DEA273 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79D2C1831C70E2BD00DEA273 /* Function.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		79F0A03E1C6CD54700F7264F = {
@@ -98,6 +111,7 @@
 		79F0A0491C6CD54700F7264F /* Pastel */ = {
 			isa = PBXGroup;
 			children = (
+				79D2C1821C70E2B300DEA273 /* Utils */,
 				79D2C17B1C70DF8D00DEA273 /* Pasteboard */,
 				79F0A04A1C6CD54700F7264F /* AppDelegate.swift */,
 				79F0A04C1C6CD54700F7264F /* ViewController.swift */,
@@ -264,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */,
+				79D2C1811C70E01A00DEA273 /* PasteboardListViewModel.swift in Sources */,
 				79F0A04D1C6CD54700F7264F /* ViewController.swift in Sources */,
+				79D2C1841C70E2BD00DEA273 /* Function.swift in Sources */,
 				79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */,
 				79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */,
 			);
