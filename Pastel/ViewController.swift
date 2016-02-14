@@ -12,25 +12,17 @@ import RxCocoa
 
 class ViewController: NSViewController {
   let disposeBag = DisposeBag()
+  let vm = PasteboardListViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let pasteboardService = PasteboardService()
-
-    pasteboardService.pasteboardItems.asDriver().driveNext {
+    vm.items().driveNext {
       print("Paste board items: \($0)")
     }
     .addDisposableTo(disposeBag)
 
-    Observable.interval(1, scheduler: MainScheduler.instance)
-      .subscribeNext {
-        (second: Int) in
-        print("Polling at second \(second)")
-        pasteboardService.pollPasteboardItems()
-      }
-      .addDisposableTo(disposeBag)
-
+    vm.startPollingItems()
     // Do any additional setup after loading the view.
   }
 
