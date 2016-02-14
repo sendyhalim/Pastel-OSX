@@ -12,17 +12,17 @@ import RxCocoa
 
 class ViewController: NSViewController {
   let disposeBag = DisposeBag()
-  let vm = PasteboardListViewModel()
+  let viewModel = PasteboardListViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    vm.items().driveNext {
+    viewModel.items().driveNext {
       print("Paste board items: \($0)")
     }
     .addDisposableTo(disposeBag)
 
-    vm.startPollingItems()
+    viewModel.startPollingItems()
     // Do any additional setup after loading the view.
   }
 
