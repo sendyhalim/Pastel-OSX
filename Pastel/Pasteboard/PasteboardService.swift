@@ -16,6 +16,10 @@ struct PasteboardService {
   let changeCount = Variable(0)
   let disposeBag = DisposeBag()
 
+  init() {
+    pollPasteboardItems()
+  }
+
   func pollPasteboardItems() {
     if changeCount.value == pasteboard.changeCount {
       return
