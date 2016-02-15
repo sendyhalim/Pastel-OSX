@@ -19,6 +19,7 @@ class MainViewController: NSViewController {
       nibName: "PasteboardCollectionViewController",
       bundle: nil
     )!
+
     mainView.addSubview(pasteboardViewController.view)
   }
 }

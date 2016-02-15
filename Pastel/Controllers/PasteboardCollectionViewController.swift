@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PasteboardCollectionViewController.swift
 //  Pastel
 //
 //  Created by Sendy Halim on 2/11/16.
