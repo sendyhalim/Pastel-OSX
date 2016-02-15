@@ -18,9 +18,17 @@ struct PasteboardListViewModel {
     return service.pasteboardItems.asDriver()
   }
 
+  func totalItems() -> Int {
+    return service.pasteboardItems.value.count
+  }
+
   func startPollingItems() {
     Observable.interval(1, scheduler: MainScheduler.instance)
       .subscribeNext(constantCall(service.pollPasteboardItems, Int.zero))
       .addDisposableTo(disposeBag)
+  }
+
+  subscript(index: Int) -> PasteboardItem {
+    return service.pasteboardItems.value[index]
   }
 }
