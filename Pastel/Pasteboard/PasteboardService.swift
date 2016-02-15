@@ -65,9 +65,8 @@ struct PasteboardService {
   private func addPasteboardItem(item: PasteboardItem) {
     pasteboardItems.value = pasteboardItems.value.filter {
       $0 != item
-    }
+    }.cons(item)
 
-    pasteboardItems.value.append(item)
     changeCount.value = pasteboard.changeCount
   }
 }
