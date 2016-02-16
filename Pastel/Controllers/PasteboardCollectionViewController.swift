@@ -18,36 +18,18 @@ class PasteboardCollectionViewController: NSViewController {
 
   @IBOutlet weak var collectionView: NSCollectionView!
 
-  override func awakeFromNib() {
-    super.viewDidLoad()
-    let textItemNib = NSNib(nibNamed: textItemCellId, bundle: nil)
-    collectionView.registerNib(textItemNib, forItemWithIdentifier: textItemCellId)
-
-    viewModel.items().driveNext {
-      [weak self] in
-      print("Paste board items: \($0)")
-      self?.collectionView.reloadData()
-
-    }
-    .addDisposableTo(disposeBag)
-
+  override func viewDidLoad() {
     viewModel.startPollingItems()
-    // Do any additional setup after loading the view.
-  }
 
-  override var representedObject: AnyObject? {
-    didSet {
-    // Update the view, if already loaded.
-    }
+    viewModel
+      .items()
+      .driveNext(constantCall(collectionView.reloadData))
+      .addDisposableTo(disposeBag)
   }
 }
 
 
-extension PasteboardCollectionViewController:
-  NSCollectionViewDataSource,
-  NSCollectionViewDelegate,
-  NSCollectionViewDelegateFlowLayout {
-
+extension PasteboardCollectionViewController: NSCollectionViewDataSource {
   func collectionView(
     collectionView: NSCollectionView,
     numberOfItemsInSection section: Int
@@ -60,7 +42,10 @@ extension PasteboardCollectionViewController:
     itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
   ) -> NSCollectionViewItem {
     let item = viewModel[indexPath.item]
-    var cell = PasteboardCollectionViewItem()
+    var cell = collectionView.makeItemWithIdentifier(
+      textItemCellId,
+      forIndexPath: indexPath
+    ) as! PasteboardCollectionViewItem
 
     switch item {
     case .Text(let text):
@@ -68,7 +53,7 @@ extension PasteboardCollectionViewController:
         textItemCellId,
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
-      cell.textField?.stringValue = text
+      cell.textLabel.stringValue = text
     default:
       break
     }

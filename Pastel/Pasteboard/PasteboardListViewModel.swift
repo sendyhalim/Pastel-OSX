@@ -23,8 +23,8 @@ struct PasteboardListViewModel {
   }
 
   func startPollingItems() {
-    Observable.interval(1, scheduler: MainScheduler.instance)
-      .subscribeNext(constantCall(service.pollPasteboardItems, Int.zero))
+    Observable<Int>.interval(1, scheduler: MainScheduler.instance)
+      .subscribeNext(constantCall(service.pollPasteboardItems))
       .addDisposableTo(disposeBag)
   }
 

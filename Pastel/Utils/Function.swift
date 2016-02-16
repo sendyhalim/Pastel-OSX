@@ -6,7 +6,7 @@
 //  Copyright © 2016 Sendy Halim. All rights reserved.
 //
 
-func constantCall <A>(function: Void -> Void, _: A) -> A -> Void {
+func constantCall <A>(function: Void -> Void) -> A -> Void {
   return { (_: A) -> Void in
     function()
   }

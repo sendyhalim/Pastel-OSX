@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		790AD1E81C721E2C00431B16 /* PasteboardCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AD1E61C721E2C00431B16 /* PasteboardCollectionViewItem.swift */; };
-		790AD1F21C72237A00431B16 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AD1F11C72237A00431B16 /* MainViewController.swift */; };
 		790AD21F1C7230FB00431B16 /* PasteboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */; };
-		790AD2211C72310300431B16 /* PasteboardCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790AD2201C72310300431B16 /* PasteboardCollectionViewController.xib */; };
-		790AD2231C72317700431B16 /* TextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790AD2221C72317700431B16 /* TextItemCell.xib */; };
+		790AD2291C724DF000431B16 /* TextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790AD2281C724DF000431B16 /* TextItemCell.xib */; };
 		794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794215901C6F21B900A5AFBB /* Swiftz.framework */; };
 		79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */; };
 		79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */; };
@@ -37,10 +35,8 @@
 
 /* Begin PBXFileReference section */
 		790AD1E61C721E2C00431B16 /* PasteboardCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewItem.swift; sourceTree = "<group>"; };
-		790AD1F11C72237A00431B16 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewController.swift; sourceTree = "<group>"; };
-		790AD2201C72310300431B16 /* PasteboardCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardCollectionViewController.xib; sourceTree = "<group>"; };
-		790AD2221C72317700431B16 /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
+		790AD2281C724DF000431B16 /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
 		794215901C6F21B900A5AFBB /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/Mac/Swiftz.framework; sourceTree = "<group>"; };
 		79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
@@ -92,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */,
-				790AD1F11C72237A00431B16 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,8 +95,7 @@
 		790AD21D1C7230D900431B16 /* xibs */ = {
 			isa = PBXGroup;
 			children = (
-				790AD2221C72317700431B16 /* TextItemCell.xib */,
-				790AD2201C72310300431B16 /* PasteboardCollectionViewController.xib */,
+				790AD2281C724DF000431B16 /* TextItemCell.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -261,9 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */,
-				790AD2231C72317700431B16 /* TextItemCell.xib in Resources */,
+				790AD2291C724DF000431B16 /* TextItemCell.xib in Resources */,
 				79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */,
-				790AD2211C72310300431B16 /* PasteboardCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +315,6 @@
 				79D2C1841C70E2BD00DEA273 /* Function.swift in Sources */,
 				79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */,
 				79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */,
-				790AD1F21C72237A00431B16 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
