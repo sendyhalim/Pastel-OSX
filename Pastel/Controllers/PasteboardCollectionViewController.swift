@@ -42,10 +42,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
     itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
   ) -> NSCollectionViewItem {
     let item = viewModel[indexPath.item]
-    var cell = collectionView.makeItemWithIdentifier(
-      textItemCellId,
-      forIndexPath: indexPath
-    ) as! PasteboardCollectionViewItem
+    var cell = PasteboardCollectionViewItem()
 
     switch item {
     case .Text(let text):
@@ -54,6 +51,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
       cell.textField?.stringValue = text
+      cell.textField?.toolTip = text
     default:
       break
     }
