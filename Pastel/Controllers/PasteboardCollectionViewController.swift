@@ -61,3 +61,32 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
     return cell
   }
 }
+
+extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout {
+  func collectionView(
+    collectionView: NSCollectionView,
+    layout collectionViewLayout: NSCollectionViewLayout,
+    sizeForItemAtIndexPath indexPath: NSIndexPath
+  ) -> NSSize {
+    return sizeForItem(viewModel[indexPath.item])
+  }
+
+  func sizeForItem(item: PasteboardItem) -> NSSize {
+    let width = collectionView.frame.size.width
+    return NSSize(width: width, height: heightForItem(item))
+  }
+
+  func heightForItem(item: PasteboardItem) -> CGFloat {
+    switch item {
+    case .Text(let str):
+      let font = NSFont.systemFontOfSize(13)
+      return str.heightForString(font, width: 364)
+
+    case .Image(let _):
+      return 0
+
+    default:
+      return 0
+    }
+  }
+}
