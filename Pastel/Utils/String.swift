@@ -17,9 +17,8 @@ extension String {
   ///
   ///  - returns: Height for the current state of `String`
   func heightForString(font: NSFont, width: CGFloat) -> CGFloat {
-    let nsstring = NSString(string: self)
-    let size = CGSize(width: width, height: CGFloat(MAXFLOAT))
-    let rect = nsstring.boundingRectWithSize(
+    let size = CGSize(width: width, height: CGFloat.max)
+    let rect = self.boundingRectWithSize(
       size,
       options: NSStringDrawingOptions.UsesLineFragmentOrigin,
       attributes: [NSFontAttributeName: font],

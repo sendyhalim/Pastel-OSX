@@ -53,7 +53,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
         textItemCellId,
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
-      cell.textLabel.stringValue = text
+      cell.textField?.stringValue = text
     default:
       break
     }
