@@ -26,7 +26,7 @@ struct PasteboardService {
     }
 
     let items = pasteboard.readObjectsForClasses(
-      [NSString.self, NSImage.self, NSURL.self],
+      [NSImage.self, NSURL.self, NSString.self],
       options: nil
     )
 
