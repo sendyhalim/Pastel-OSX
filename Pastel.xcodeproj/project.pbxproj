@@ -11,6 +11,7 @@
 		790AD21F1C7230FB00431B16 /* PasteboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */; };
 		790AD2291C724DF000431B16 /* TextItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790AD2281C724DF000431B16 /* TextItemCell.xib */; };
 		794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794215901C6F21B900A5AFBB /* Swiftz.framework */; };
+		7955C8861C74DF5900C688E3 /* ImageItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7955C8851C74DF5900C688E3 /* ImageItemCell.xib */; };
 		795E57361C7372D900A9EF48 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E57351C7372D900A9EF48 /* String.swift */; };
 		79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */; };
 		79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */; };
@@ -39,6 +40,7 @@
 		790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewController.swift; sourceTree = "<group>"; };
 		790AD2281C724DF000431B16 /* TextItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextItemCell.xib; sourceTree = "<group>"; };
 		794215901C6F21B900A5AFBB /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/Mac/Swiftz.framework; sourceTree = "<group>"; };
+		7955C8851C74DF5900C688E3 /* ImageItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageItemCell.xib; sourceTree = "<group>"; };
 		795E57351C7372D900A9EF48 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				790AD2281C724DF000431B16 /* TextItemCell.xib */,
+				7955C8851C74DF5900C688E3 /* ImageItemCell.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7955C8861C74DF5900C688E3 /* ImageItemCell.xib in Resources */,
 				79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */,
 				790AD2291C724DF000431B16 /* TextItemCell.xib in Resources */,
 				79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */,
