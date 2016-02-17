@@ -676,7 +676,7 @@
                             <rect key="frame" x="1" y="1" width="448" height="298"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <collectionView id="jez-11-A7W">
+                                <collectionView selectable="YES" id="jez-11-A7W">
                                     <rect key="frame" x="0.0" y="0.0" width="448" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="I2M-pO-Wvc">
