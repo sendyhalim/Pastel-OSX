@@ -42,28 +42,32 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
     collectionView: NSCollectionView,
     itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
   ) -> NSCollectionViewItem {
-    let item = viewModel[indexPath.item]
     var cell = PasteboardCollectionViewItem()
+    let item = viewModel[indexPath.item]
 
     switch item {
+    case .URL(let url):
+      cell = collectionView.makeItemWithIdentifier(
+        textItemCellId,
+        forIndexPath: indexPath
+      ) as! PasteboardCollectionViewItem
+      cell.textField!.stringValue = url.description
+      cell.textField!.toolTip = url.description
+
     case .Text(let text):
       cell = collectionView.makeItemWithIdentifier(
         textItemCellId,
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
-      cell.textField?.stringValue = text
-      cell.textField?.toolTip = text
+      cell.textField!.stringValue = text
+      cell.textField!.toolTip = text
 
     case .Image(let image):
       cell = collectionView.makeItemWithIdentifier(
         imageItemCellId,
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
-      cell.imageView?.image = image
-      cell.imageView?.setNeedsDisplay()
-
-    default:
-      break
+      cell.imageView!.image = image
     }
 
     return cell
@@ -88,15 +92,16 @@ extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout
     let maxHeight = collectionView.frame.size.height
 
     switch item {
+    case .URL(let url):
+      let font = NSFont.systemFontOfSize(13)
+      return url.description.heightForString(font, width: 364)
+
     case .Text(let text):
       let font = NSFont.systemFontOfSize(13)
       return text.heightForString(font, width: 364)
 
     case .Image(let image):
       return maxHeight > 185 ? 185 : image.size.height
-
-    default:
-      return maxHeight
     }
   }
 }
