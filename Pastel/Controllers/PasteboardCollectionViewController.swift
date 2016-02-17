@@ -12,6 +12,7 @@ import RxCocoa
 
 class PasteboardCollectionViewController: NSViewController {
   let textItemCellId = "TextItemCell"
+  let imageItemCellId = "ImageItemCell"
 
   let disposeBag = DisposeBag()
   let viewModel = PasteboardListViewModel()
@@ -52,6 +53,15 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
       ) as! PasteboardCollectionViewItem
       cell.textField?.stringValue = text
       cell.textField?.toolTip = text
+
+    case .Image(let image):
+      cell = collectionView.makeItemWithIdentifier(
+        imageItemCellId,
+        forIndexPath: indexPath
+      ) as! PasteboardCollectionViewItem
+      cell.imageView?.image = image
+      cell.imageView?.setNeedsDisplay()
+
     default:
       break
     }
@@ -75,16 +85,27 @@ extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout
   }
 
   func heightForItem(item: PasteboardItem) -> CGFloat {
-    switch item {
-    case .Text(let str):
-      let font = NSFont.systemFontOfSize(13)
-      return str.heightForString(font, width: 364)
+    let maxHeight = collectionView.frame.size.height
 
-    case .Image(let _):
-      return 0
+    switch item {
+    case .Text(let text):
+      let font = NSFont.systemFontOfSize(13)
+      return text.heightForString(font, width: 364)
+
+    case .Image(let image):
+      return maxHeight > 185 ? 185 : image.size.height
 
     default:
-      return 0
+      return maxHeight
     }
+  }
+}
+
+extension PasteboardCollectionViewController: NSCollectionViewDelegate {
+  func collectionView(
+    collectionView: NSCollectionView,
+    didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>
+  ) {
+    print("selected")
   }
 }

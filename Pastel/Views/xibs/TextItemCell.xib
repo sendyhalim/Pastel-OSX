@@ -23,7 +23,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="1gm-Po-7ER"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="W7V-vT-6jt" userLabel="Text Field Cell">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="W7V-vT-6jt" userLabel="Text Field Cell">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
