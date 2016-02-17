@@ -15,13 +15,13 @@ enum PasteboardItem {
 }
 
 extension NSImage {
-  public override func isEqual(img: AnyObject?) -> Bool {
-    guard let img = img as? NSImage else {
+  public override func isEqualTo(object: AnyObject?) -> Bool {
+    guard let rhsImage = object as? NSImage else {
       return false
     }
 
     guard let lhs = self.TIFFRepresentation,
-          let rhs = img.TIFFRepresentation else {
+          let rhs = rhsImage.TIFFRepresentation else {
       return false
     }
 
