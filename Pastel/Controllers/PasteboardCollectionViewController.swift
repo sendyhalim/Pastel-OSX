@@ -43,35 +43,44 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
     collectionView: NSCollectionView,
     itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
   ) -> NSCollectionViewItem {
-    var cell = PasteboardCollectionViewItem()
     let item = viewModel[indexPath.item]
+    return cellForItem(item, atIndexPath: indexPath)
+  }
 
+  func cellForItem(
+    item: PasteboardItem,
+    atIndexPath indexPath: NSIndexPath
+  ) -> PasteboardCollectionViewItem {
     switch item {
     case .URL(let url):
-      cell = collectionView.makeItemWithIdentifier(
+      let cell = collectionView.makeItemWithIdentifier(
         textItemCellId,
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
       cell.textField!.stringValue = url.description
       cell.textField!.toolTip = url.description
+      return cell
 
     case .Text(let text):
-      cell = collectionView.makeItemWithIdentifier(
+      let cell = collectionView.makeItemWithIdentifier(
         textItemCellId,
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
       cell.textField!.stringValue = text
       cell.textField!.toolTip = text
+      return cell
 
     case .Image(let image):
-      cell = collectionView.makeItemWithIdentifier(
+      let cell = collectionView.makeItemWithIdentifier(
         imageItemCellId,
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
       cell.imageView!.image = image
-    }
+      return cell
 
-    return cell
+    case .LocalFile(_, let _item):
+      return cellForItem(_item, atIndexPath: indexPath)
+    }
   }
 }
 
@@ -103,6 +112,9 @@ extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout
 
     case .Image(let image):
       return maxHeight > 185 ? 185 : image.size.height
+
+    case .LocalFile(_, let item):
+      return heightForItem(item)
     }
   }
 

@@ -8,10 +8,11 @@
 
 import Cocoa
 
-enum PasteboardItem {
+indirect enum PasteboardItem {
   case Text(String)
   case URL(NSURL)
   case Image(NSImage)
+  case LocalFile((NSURL, PasteboardItem))
 }
 
 extension NSImage {
@@ -39,6 +40,9 @@ func == (lhs: PasteboardItem, rhs: PasteboardItem) -> Bool {
 
   case (.Image(let image1), .Image(let image2)):
     return image1.isEqualTo(image2)
+
+  case (.LocalFile(_, let item1), .LocalFile(_, let item2)):
+    return item1 == item2
 
   default:
     return false
