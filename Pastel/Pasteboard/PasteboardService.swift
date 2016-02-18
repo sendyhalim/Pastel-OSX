@@ -25,19 +25,16 @@ struct PasteboardService {
       return
     }
 
-    guard let items = pasteboard.readObjectsForClasses(
-        [NSURL.self, NSString.self, NSImage.self],
-        options: [
-          NSPasteboardTypeString: NSNumber(bool: true),
-          NSPasteboardURLReadingFileURLsOnlyKey: NSNumber(bool: true),
-          NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes()
-        ]
-      )
-      where items.count > 0 else {
-      return
-    }
+    let items = pasteboard.readObjectsForClasses(
+      [NSURL.self, NSString.self, NSImage.self],
+      options: [
+        NSPasteboardTypeString: NSNumber(bool: true),
+        NSPasteboardURLReadingFileURLsOnlyKey: NSNumber(bool: true),
+        NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes()
+      ]
+    )
 
-    items.first >>- pasteboardItem >>- addPasteboardItem
+    items?.first >>- pasteboardItem >>- addPasteboardItem
   }
 
   func pasteboardItem(item: AnyObject) -> PasteboardItem? {
