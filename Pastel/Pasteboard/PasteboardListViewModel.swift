@@ -28,6 +28,10 @@ struct PasteboardListViewModel {
       .addDisposableTo(disposeBag)
   }
 
+  func addItemToPasteboard(index: Int) {
+    service.addItemToPasteboard(self[index])
+  }
+
   subscript(index: Int) -> PasteboardItem {
     return service.pasteboardItems.value[index]
   }

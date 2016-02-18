@@ -9,6 +9,7 @@
 import Cocoa
 import RxSwift
 import RxCocoa
+import Swiftz
 
 class PasteboardCollectionViewController: NSViewController {
   let textItemCellId = "TextItemCell"
@@ -104,13 +105,12 @@ extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout
       return maxHeight > 185 ? 185 : image.size.height
     }
   }
-}
 
-extension PasteboardCollectionViewController: NSCollectionViewDelegate {
   func collectionView(
     collectionView: NSCollectionView,
     didSelectItemsAtIndexPaths indexPaths: Set<NSIndexPath>
   ) {
-    print("selected")
+    let index = indexPaths.first!.item
+    viewModel.addItemToPasteboard(index)
   }
 }
