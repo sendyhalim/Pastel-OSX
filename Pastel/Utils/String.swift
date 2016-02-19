@@ -25,6 +25,6 @@ extension String {
       context: nil
     )
 
-    return ceil(rect.height)
+    return rect.height
   }
 }
