@@ -11,6 +11,36 @@ import RxSwift
 import RxCocoa
 import Swiftz
 
+struct ItemCell {
+  static let maxHeight: CGFloat = 185
+  static let maxWidth: CGFloat = 364
+  static let height = adjustedHeight • heightForItem
+}
+
+func adjustedHeight(height: CGFloat) -> CGFloat {
+  return (height > ItemCell.maxHeight) ?
+    ItemCell.maxHeight :
+    height
+}
+
+func heightForItem(item: PasteboardItem) -> CGFloat {
+  switch item {
+  case .URL(let url):
+    let font = NSFont.systemFontOfSize(13)
+    return url.description.heightForString(font, width: ItemCell.maxWidth)
+
+  case .Text(let text):
+    let font = NSFont.systemFontOfSize(13)
+    return text.heightForString(font, width: ItemCell.maxWidth)
+
+  case .Image(let image):
+    return image.size.height
+
+  case .LocalFile(_, let item):
+    return heightForItem(item)
+  }
+}
+
 class PasteboardCollectionViewController: NSViewController {
   let textItemCellId = "TextItemCell"
   let imageItemCellId = "ImageItemCell"
@@ -95,33 +125,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout
 
   func sizeForItem(item: PasteboardItem) -> NSSize {
     let width = collectionView.frame.size.width
-    return NSSize(width: width, height: heightForItem(item))
-  }
-
-  func adjustedTextHeight(height: CGFloat) -> CGFloat {
-    return height > 185 ? 185 : height
-  }
-
-  func heightForItem(item: PasteboardItem) -> CGFloat {
-    let maxHeight = collectionView.frame.size.height
-
-    switch item {
-    case .URL(let url):
-      let font = NSFont.systemFontOfSize(13)
-      let height = url.description.heightForString(font, width: 364)
-      return adjustedTextHeight(height)
-
-    case .Text(let text):
-      let font = NSFont.systemFontOfSize(13)
-      let height = text.heightForString(font, width: 364)
-      return adjustedTextHeight(height)
-
-    case .Image(let image):
-      return maxHeight > 185 ? 185 : image.size.height
-
-    case .LocalFile(_, let item):
-      return heightForItem(item)
-    }
+    return NSSize(width: width, height: ItemCell.height(item))
   }
 
   func collectionView(
