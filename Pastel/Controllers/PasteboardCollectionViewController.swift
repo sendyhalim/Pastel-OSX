@@ -14,13 +14,20 @@ import Swiftz
 struct ItemCell {
   static let maxHeight: CGFloat = 185
   static let maxWidth: CGFloat = 364
+  static let minHeight: CGFloat = 85
   static let height = adjustedHeight • heightForItem
 }
 
 func adjustedHeight(height: CGFloat) -> CGFloat {
-  return (height > ItemCell.maxHeight) ?
-    ItemCell.maxHeight :
-    height
+  if height < ItemCell.minHeight {
+    return ItemCell.minHeight
+  }
+
+  if height > ItemCell.maxHeight {
+    return ItemCell.maxHeight
+  }
+
+  return height
 }
 
 func heightForItem(item: PasteboardItem) -> CGFloat {
