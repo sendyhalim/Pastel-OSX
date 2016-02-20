@@ -34,13 +34,17 @@ struct PasteboardService {
       ]
     )
 
-    items?.first >>- pasteboardItem >>- addPasteboardItem
+    items?.first >>- pasteboardItemType >>- pasteboardItem >>- addPasteboardItem
   }
 
-  func pasteboardItem(item: AnyObject) -> PasteboardItem? {
+  func pasteboardItem(type: PasteboardItemType) -> PasteboardItem {
+    return PasteboardItem(type: type)
+  }
+
+  func pasteboardItemType(item: AnyObject) -> PasteboardItemType? {
     if let url = item as? NSURL {
       if let image = NSImage(contentsOfURL: url) {
-        return .LocalFile(url, PasteboardItem.Image(image))
+        return .LocalFile(url, PasteboardItemType.Image(image))
       }
 
       return .URL(url)
@@ -60,7 +64,7 @@ struct PasteboardService {
   func addItemToPasteboard(item: PasteboardItem) {
     pasteboard.clearContents()
 
-    switch item {
+    switch item.type {
     case .URL(let url):
       pasteboard.writeObjects([url])
 

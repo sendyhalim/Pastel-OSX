@@ -15,7 +15,7 @@ struct ItemCell {
   static let maxHeight: CGFloat = 185
   static let maxWidth: CGFloat = 364
   static let minHeight: CGFloat = 85
-  static let height = adjustedHeight • heightForItem
+  static let height = adjustedHeight • heightForItemType
 }
 
 func adjustedHeight(height: CGFloat) -> CGFloat {
@@ -30,8 +30,8 @@ func adjustedHeight(height: CGFloat) -> CGFloat {
   return height
 }
 
-func heightForItem(item: PasteboardItem) -> CGFloat {
-  switch item {
+func heightForItemType(type: PasteboardItemType) -> CGFloat {
+  switch type {
   case .URL(let url):
     let font = NSFont.systemFontOfSize(13)
     return url.description.heightForString(font, width: ItemCell.maxWidth)
@@ -43,8 +43,8 @@ func heightForItem(item: PasteboardItem) -> CGFloat {
   case .Image(let image):
     return image.size.height
 
-  case .LocalFile(_, let item):
-    return heightForItem(item)
+  case .LocalFile(_, let _type):
+    return heightForItemType(_type)
   }
 }
 
@@ -81,14 +81,14 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
     itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
   ) -> NSCollectionViewItem {
     let item = viewModel[indexPath.item]
-    return cellForItem(item, atIndexPath: indexPath)
+    return cellForItemType(item.type, atIndexPath: indexPath)
   }
 
-  func cellForItem(
-    item: PasteboardItem,
+  func cellForItemType(
+    type: PasteboardItemType,
     atIndexPath indexPath: NSIndexPath
   ) -> PasteboardCollectionViewItem {
-    switch item {
+    switch type {
     case .URL(let url):
       let cell = collectionView.makeItemWithIdentifier(
         textItemCellId,
@@ -115,8 +115,8 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
       cell.imageView!.image = image
       return cell
 
-    case .LocalFile(_, let _item):
-      return cellForItem(_item, atIndexPath: indexPath)
+    case .LocalFile(_, let _type):
+      return cellForItemType(_type, atIndexPath: indexPath)
     }
   }
 }
@@ -132,7 +132,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout
 
   func sizeForItem(item: PasteboardItem) -> NSSize {
     let width = collectionView.frame.size.width
-    return NSSize(width: width, height: ItemCell.height(item))
+    return NSSize(width: width, height: ItemCell.height(item.type))
   }
 
   func collectionView(
