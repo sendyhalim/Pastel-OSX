@@ -17,9 +17,11 @@ indirect enum PasteboardItemType {
 
 struct PasteboardItem {
   let type: PasteboardItemType
+  let createdAt: NSDate
 
   init(type: PasteboardItemType) {
     self.type = type
+    self.createdAt = NSDate()
   }
 }
 
