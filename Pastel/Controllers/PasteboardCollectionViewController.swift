@@ -81,7 +81,9 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
     itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
   ) -> NSCollectionViewItem {
     let item = viewModel[indexPath.item]
-    return cellForItemType(item.type, atIndexPath: indexPath)
+    let cell = cellForItemType(item.type, atIndexPath: indexPath)
+    cell.createdAtTextField.stringValue = item.createdAt.description
+    return cell
   }
 
   func cellForItemType(

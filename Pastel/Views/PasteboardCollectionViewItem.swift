@@ -9,6 +9,8 @@
 import Cocoa
 
 class PasteboardCollectionViewItem: NSCollectionViewItem {
+  @IBOutlet weak var createdAtTextField: NSTextField!
+
   override func viewDidLoad() {
     super.viewDidLoad()
   }

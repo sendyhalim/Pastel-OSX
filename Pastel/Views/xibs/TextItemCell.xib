@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner"/>
         <collectionViewItem nibName="TextItemCell" id="Zbh-ZP-1Vd" userLabel="Pasteboard Collection View Item" customClass="PasteboardCollectionViewItem" customModule="Pastel" customModuleProvider="target">
             <connections>
+                <outlet property="createdAtTextField" destination="8eS-yE-QRj" id="4Ff-O7-o6V"/>
                 <outlet property="textField" destination="bez-jc-W1V" id="YKB-1v-95F"/>
                 <outlet property="view" destination="c22-O7-iKe" id="jnR-lp-fN1"/>
             </connections>
@@ -15,7 +16,7 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="78"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="103"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bez-jc-W1V" userLabel="Text Field">
@@ -32,17 +33,28 @@
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8eS-yE-QRj" userLabel="Created At Text Field">
+                    <rect key="frame" x="18" y="66" width="364" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="kvd-N3-x9T">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
+                <constraint firstItem="bez-jc-W1V" firstAttribute="top" secondItem="8eS-yE-QRj" secondAttribute="bottom" constant="8" symbolic="YES" id="45R-lM-1r8"/>
                 <constraint firstItem="bez-jc-W1V" firstAttribute="leading" secondItem="bH9-Tj-wwW" secondAttribute="leading" id="8iL-Ym-1Do"/>
                 <constraint firstAttribute="bottom" secondItem="bH9-Tj-wwW" secondAttribute="bottom" constant="20" symbolic="YES" id="FCF-St-k9G"/>
                 <constraint firstItem="bH9-Tj-wwW" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="Q5F-Di-1vW"/>
-                <constraint firstItem="bez-jc-W1V" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" symbolic="YES" id="VtM-vF-0QF"/>
                 <constraint firstItem="bez-jc-W1V" firstAttribute="trailing" secondItem="bH9-Tj-wwW" secondAttribute="trailing" id="aSw-KT-KR3"/>
+                <constraint firstItem="8eS-yE-QRj" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="ezJ-Da-Cad"/>
+                <constraint firstAttribute="trailing" secondItem="8eS-yE-QRj" secondAttribute="trailing" constant="20" symbolic="YES" id="tzU-Mb-P7S"/>
                 <constraint firstAttribute="trailing" secondItem="bH9-Tj-wwW" secondAttribute="trailing" constant="20" symbolic="YES" id="wg2-ML-CnQ"/>
                 <constraint firstItem="bH9-Tj-wwW" firstAttribute="top" secondItem="bez-jc-W1V" secondAttribute="bottom" constant="20" id="ytR-S9-52D"/>
+                <constraint firstItem="8eS-yE-QRj" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" symbolic="YES" id="zk7-xA-XEC"/>
             </constraints>
-            <point key="canvasLocation" x="415" y="396"/>
+            <point key="canvasLocation" x="415" y="375.5"/>
         </customView>
     </objects>
 </document>

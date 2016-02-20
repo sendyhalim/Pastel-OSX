@@ -9,7 +9,7 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="246"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="271"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7BB-bc-cOS">
@@ -22,20 +22,32 @@
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="669-96-xcf" userLabel="Created At Text Field">
+                    <rect key="frame" x="18" y="234" width="364" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="CL2-Xc-WEP">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstItem="nLd-0H-Xr6" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="DZz-c9-XgN"/>
-                <constraint firstItem="7BB-bc-cOS" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" symbolic="YES" id="PcB-Es-Lp4"/>
+                <constraint firstItem="7BB-bc-cOS" firstAttribute="top" secondItem="669-96-xcf" secondAttribute="bottom" constant="8" symbolic="YES" id="IHu-79-nbU"/>
+                <constraint firstAttribute="trailing" secondItem="669-96-xcf" secondAttribute="trailing" constant="20" id="IiY-1A-xTS"/>
+                <constraint firstItem="669-96-xcf" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="N0O-KQ-X9K"/>
                 <constraint firstAttribute="trailing" secondItem="nLd-0H-Xr6" secondAttribute="trailing" constant="20" symbolic="YES" id="Rfd-6o-VXq"/>
                 <constraint firstAttribute="trailing" secondItem="7BB-bc-cOS" secondAttribute="trailing" constant="20" symbolic="YES" id="UkY-i0-uM3"/>
                 <constraint firstItem="7BB-bc-cOS" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" symbolic="YES" id="amy-Wt-XlQ"/>
                 <constraint firstItem="nLd-0H-Xr6" firstAttribute="top" secondItem="7BB-bc-cOS" secondAttribute="bottom" constant="20" id="bGP-BX-5DT"/>
+                <constraint firstItem="669-96-xcf" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="hWz-gJ-pva"/>
                 <constraint firstAttribute="bottom" secondItem="nLd-0H-Xr6" secondAttribute="bottom" constant="20" symbolic="YES" id="zNr-uy-Edc"/>
             </constraints>
-            <point key="canvasLocation" x="223" y="425"/>
+            <point key="canvasLocation" x="223" y="412.5"/>
         </customView>
         <customObject id="lmD-Ss-qqh" customClass="PasteboardCollectionViewItem" customModule="Pastel" customModuleProvider="target">
             <connections>
+                <outlet property="createdAtTextField" destination="669-96-xcf" id="C13-7H-gth"/>
                 <outlet property="imageView" destination="7BB-bc-cOS" id="s1L-aj-pOC"/>
                 <outlet property="view" destination="c22-O7-iKe" id="HTz-ik-8vf"/>
             </connections>
