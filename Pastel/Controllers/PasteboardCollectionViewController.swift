@@ -12,9 +12,9 @@ import RxCocoa
 import Swiftz
 
 struct ItemCell {
-  static let maxHeight: CGFloat = 185
+  static let maxHeight: CGFloat = 200
   static let maxWidth: CGFloat = 364
-  static let minHeight: CGFloat = 85
+  static let minHeight: CGFloat = 115
   static let height = adjustedHeight • heightForItemType
 }
 
@@ -82,7 +82,12 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
   ) -> NSCollectionViewItem {
     let item = viewModel[indexPath.item]
     let cell = cellForItemType(item.type, atIndexPath: indexPath)
-    cell.createdAtTextField.stringValue = item.createdAt.description
+
+    // TODO: Create PasteboardItemViewModel to provide the formatted date
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = "MMM. dd, yyyy 'at' HH:mm"
+    cell.createdAtTextField.stringValue = formatter.stringFromDate(item.createdAt)
+
     return cell
   }
 
