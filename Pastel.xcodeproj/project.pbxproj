@@ -13,6 +13,10 @@
 		794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794215901C6F21B900A5AFBB /* Swiftz.framework */; };
 		7955C8861C74DF5900C688E3 /* ImageItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7955C8851C74DF5900C688E3 /* ImageItemCell.xib */; };
 		795E57361C7372D900A9EF48 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795E57351C7372D900A9EF48 /* String.swift */; };
+		7980E2481C7C9FC2003095F8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7980E2461C7C9FC2003095F8 /* Nimble.framework */; };
+		7980E2491C7C9FC2003095F8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7980E2471C7C9FC2003095F8 /* Quick.framework */; };
+		7980E24B1C7C9FD7003095F8 /* Nimble.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 7980E2461C7C9FC2003095F8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7980E24C1C7C9FD7003095F8 /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 7980E2471C7C9FC2003095F8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */; };
 		79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */; };
 		79D2C1811C70E01A00DEA273 /* PasteboardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */; };
@@ -34,6 +38,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7980E24A1C7C9FC7003095F8 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				7980E24B1C7C9FD7003095F8 /* Nimble.framework in Copy Files */,
+				7980E24C1C7C9FD7003095F8 /* Quick.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		790AD1E61C721E2C00431B16 /* PasteboardCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewItem.swift; sourceTree = "<group>"; };
 		790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +60,8 @@
 		794215901C6F21B900A5AFBB /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/Mac/Swiftz.framework; sourceTree = "<group>"; };
 		7955C8851C74DF5900C688E3 /* ImageItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageItemCell.xib; sourceTree = "<group>"; };
 		795E57351C7372D900A9EF48 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7980E2461C7C9FC2003095F8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		7980E2471C7C9FC2003095F8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardListViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7980E2481C7C9FC2003095F8 /* Nimble.framework in Frameworks */,
+				7980E2491C7C9FC2003095F8 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +190,8 @@
 		79F0A06D1C6CDC9000F7264F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7980E2461C7C9FC2003095F8 /* Nimble.framework */,
+				7980E2471C7C9FC2003095F8 /* Quick.framework */,
 				794215901C6F21B900A5AFBB /* Swiftz.framework */,
 				79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */,
 				79F0A06F1C6CDCA200F7264F /* RxSwift.framework */,
@@ -203,6 +228,7 @@
 				79F0A0541C6CD54700F7264F /* Sources */,
 				79F0A0551C6CD54700F7264F /* Frameworks */,
 				79F0A0561C6CD54700F7264F /* Resources */,
+				7980E24A1C7C9FC7003095F8 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -469,6 +495,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PastelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelTests;
@@ -482,6 +512,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = PastelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelTests;
