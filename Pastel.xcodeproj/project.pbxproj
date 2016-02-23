@@ -24,6 +24,7 @@
 		79D2C1811C70E01A00DEA273 /* PasteboardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */; };
 		79D2C1841C70E2BD00DEA273 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1831C70E2BD00DEA273 /* Function.swift */; };
 		79D7677E1C7CB1DB00932394 /* PasteboardItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D7677D1C7CB1DB00932394 /* PasteboardItemSpec.swift */; };
+		79D767801C7CBDCE00932394 /* PasteboardItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D7677F1C7CBDCE00932394 /* PasteboardItemViewModel.swift */; };
 		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
 		79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A0501C6CD54700F7264F /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardListViewModel.swift; sourceTree = "<group>"; };
 		79D2C1831C70E2BD00DEA273 /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		79D7677D1C7CB1DB00932394 /* PasteboardItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemSpec.swift; sourceTree = "<group>"; };
+		79D7677F1C7CBDCE00932394 /* PasteboardItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemViewModel.swift; sourceTree = "<group>"; };
 		79F0A0471C6CD54700F7264F /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A04A1C6CD54700F7264F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F0A04E1C6CD54700F7264F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */,
 				79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */,
 				79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */,
+				79D7677F1C7CBDCE00932394 /* PasteboardItemViewModel.swift */,
 			);
 			path = Pasteboard;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */,
 				795E57361C7372D900A9EF48 /* String.swift in Sources */,
 				79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */,
+				79D767801C7CBDCE00932394 /* PasteboardItemViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
