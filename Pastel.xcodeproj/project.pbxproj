@@ -23,6 +23,7 @@
 		79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */; };
 		79D2C1811C70E01A00DEA273 /* PasteboardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */; };
 		79D2C1841C70E2BD00DEA273 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1831C70E2BD00DEA273 /* Function.swift */; };
+		79D7677E1C7CB1DB00932394 /* PasteboardItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D7677D1C7CB1DB00932394 /* PasteboardItemSpec.swift */; };
 		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
 		79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A0501C6CD54700F7264F /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardListViewModel.swift; sourceTree = "<group>"; };
 		79D2C1831C70E2BD00DEA273 /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		79D7677D1C7CB1DB00932394 /* PasteboardItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemSpec.swift; sourceTree = "<group>"; };
 		79F0A0471C6CD54700F7264F /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A04A1C6CD54700F7264F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F0A04E1C6CD54700F7264F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				7980E2501C7CA08E003095F8 /* PasteboardServiceSpec.swift */,
+				79D7677D1C7CB1DB00932394 /* PasteboardItemSpec.swift */,
 			);
 			path = Pasteboard;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				79AFAED61C7CA8A700DF4358 /* PasteboardItem+Nimble.swift in Sources */,
 				7980E2511C7CA08E003095F8 /* PasteboardServiceSpec.swift in Sources */,
+				79D7677E1C7CB1DB00932394 /* PasteboardItemSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
