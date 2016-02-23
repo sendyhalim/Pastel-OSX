@@ -19,9 +19,14 @@ struct PasteboardItem {
   let type: PasteboardItemType
   let createdAt: NSDate
 
-  init(type: PasteboardItemType) {
+
+  init(type: PasteboardItemType, createdAt: NSDate) {
     self.type = type
-    self.createdAt = NSDate()
+    self.createdAt = createdAt
+  }
+
+  init(type: PasteboardItemType) {
+    self.init(type: type, createdAt: NSDate())
   }
 }
 
