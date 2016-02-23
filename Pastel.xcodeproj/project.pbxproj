@@ -20,7 +20,6 @@
 		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
 		79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A0501C6CD54700F7264F /* Main.storyboard */; };
-		79F0A05D1C6CD54700F7264F /* PastelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A05C1C6CD54700F7264F /* PastelTests.swift */; };
 		79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */; };
 		79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06F1C6CDCA200F7264F /* RxSwift.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		79F0A0511C6CD54700F7264F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79F0A0531C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F0A0581C6CD54700F7264F /* PastelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PastelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79F0A05C1C6CD54700F7264F /* PastelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastelTests.swift; sourceTree = "<group>"; };
 		79F0A05E1C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
 		79F0A06F1C6CDCA200F7264F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		79F0A05B1C6CD54700F7264F /* PastelTests */ = {
 			isa = PBXGroup;
 			children = (
-				79F0A05C1C6CD54700F7264F /* PastelTests.swift */,
 				79F0A05E1C6CD54700F7264F /* Info.plist */,
 			);
 			path = PastelTests;
@@ -330,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F0A05D1C6CD54700F7264F /* PastelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
