@@ -80,13 +80,9 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
     collectionView: NSCollectionView,
     itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath
   ) -> NSCollectionViewItem {
-    let item = viewModel[indexPath.item]
-    let cell = cellForItemType(item.type, atIndexPath: indexPath)
-
-    // TODO: Create PasteboardItemViewModel to provide the formatted date
-    let formatter = NSDateFormatter()
-    formatter.dateFormat = "MMM. dd, yyyy 'at' HH:mm"
-    cell.createdAtTextField.stringValue = formatter.stringFromDate(item.createdAt)
+    let vm = viewModel[indexPath.item]
+    let cell = cellForItemType(vm.item.type, atIndexPath: indexPath)
+    cell.createdAtTextField.stringValue = vm.createdAt
 
     return cell
   }
@@ -136,7 +132,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDelegateFlowLayout
     layout collectionViewLayout: NSCollectionViewLayout,
     sizeForItemAtIndexPath indexPath: NSIndexPath
   ) -> NSSize {
-    return sizeForItem(viewModel[indexPath.item])
+    return sizeForItem(viewModel[indexPath.item].item)
   }
 
   func sizeForItem(item: PasteboardItem) -> NSSize {

@@ -29,10 +29,11 @@ struct PasteboardListViewModel {
   }
 
   func addItemToPasteboard(index: Int) {
-    service.addItemToPasteboard(self[index])
+    service.addItemToPasteboard(self[index].item)
   }
 
-  subscript(index: Int) -> PasteboardItem {
-    return service.pasteboardItems.value[index]
+  subscript(index: Int) -> PasteboardItemViewModel {
+    let item = service.pasteboardItems.value[index]
+    return PasteboardItemViewModel(item)
   }
 }
