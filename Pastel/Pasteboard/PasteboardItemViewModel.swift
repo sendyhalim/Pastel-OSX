@@ -16,7 +16,7 @@ struct PasteboardItemViewModel {
     return formatter.stringFromDate(item.createdAt)
   }
 
-  init(_item: PasteboardItem) {
+  init(_ _item: PasteboardItem) {
     item = _item
     formatter.dateFormat = "MMM. dd, yyyy 'at' HH:mm"
   }
