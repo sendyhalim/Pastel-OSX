@@ -102,7 +102,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
       cell.textField!.stringValue = url.description
-      cell.textField!.toolTip = url.description
+      cell.view.toolTip = url.description
       return cell
 
     case .Text(let text):
@@ -111,7 +111,7 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
         forIndexPath: indexPath
       ) as! PasteboardCollectionViewItem
       cell.textField!.stringValue = text
-      cell.textField!.toolTip = text
+      cell.view.toolTip = text
       return cell
 
     case .Image(let image):
@@ -122,8 +122,10 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
       cell.imageView!.image = image
       return cell
 
-    case .LocalFile(_, let _type):
-      return cellForItemType(_type, atIndexPath: indexPath)
+    case .LocalFile(let url, let _type):
+      let cell = cellForItemType(_type, atIndexPath: indexPath)
+      cell.view.toolTip = url.path
+      return cell
     }
   }
 }
