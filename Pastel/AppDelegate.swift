@@ -12,6 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
   let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
   let popover = NSPopover()
+  var eventMonitor: EventMonitor?
 
   func applicationDidFinishLaunching(aNotification: NSNotification) {
     guard let button = statusItem.button else {
@@ -21,10 +22,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     button.image = NSImage(named: "StatusBarButtonImage")
     button.action = Selector("togglePopover:")
 
+    popover.behavior = NSPopoverBehavior.Semitransient
     popover.contentViewController = PasteboardCollectionViewController(
       nibName: "PasteboardCollectionViewController",
       bundle: nil
     )
+
+    eventMonitor = EventMonitor(mask: [.LeftMouseDownMask, .RightMouseDownMask]) {
+      [unowned self] event in
+      if self.popover.shown {
+        self.closePopover(event)
+      }
+    }
+
+    eventMonitor?.start()
   }
 
   func applicationWillTerminate(aNotification: NSNotification) {
@@ -45,9 +56,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       ofView: statusItem.button!,
       preferredEdge: NSRectEdge.MinY
     )
+
+    eventMonitor?.start()
   }
 
   func closePopover(sender: AnyObject?) {
     popover.performClose(sender)
+    eventMonitor?.stop()
   }
 }
