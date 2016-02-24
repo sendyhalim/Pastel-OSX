@@ -19,6 +19,8 @@
 		7980E24C1C7C9FD7003095F8 /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 7980E2471C7C9FC2003095F8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7980E2511C7CA08E003095F8 /* PasteboardServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980E2501C7CA08E003095F8 /* PasteboardServiceSpec.swift */; };
 		79AFAED61C7CA8A700DF4358 /* PasteboardItem+Nimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AFAED51C7CA8A700DF4358 /* PasteboardItem+Nimble.swift */; };
+		79C9B9B21C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C9B9B11C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib */; };
+		79C9B9B61C7DFA7600A4DCF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C9B9B51C7DFA7600A4DCF1 /* MainMenu.xib */; };
 		79D2C17E1C70DFBF00DEA273 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */; };
 		79D2C17F1C70DFBF00DEA273 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */; };
 		79D2C1811C70E01A00DEA273 /* PasteboardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */; };
@@ -28,7 +30,6 @@
 		79D767821C7CBF1100932394 /* PasteboardItemViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D767811C7CBF1100932394 /* PasteboardItemViewModelSpec.swift */; };
 		79F0A04B1C6CD54700F7264F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0A04A1C6CD54700F7264F /* AppDelegate.swift */; };
 		79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A04E1C6CD54700F7264F /* Assets.xcassets */; };
-		79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F0A0501C6CD54700F7264F /* Main.storyboard */; };
 		79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06E1C6CDCA200F7264F /* RxCocoa.framework */; };
 		79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F0A06F1C6CDCA200F7264F /* RxSwift.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,8 @@
 		7980E2471C7C9FC2003095F8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		7980E2501C7CA08E003095F8 /* PasteboardServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardServiceSpec.swift; sourceTree = "<group>"; };
 		79AFAED51C7CA8A700DF4358 /* PasteboardItem+Nimble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PasteboardItem+Nimble.swift"; sourceTree = "<group>"; };
+		79C9B9B11C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardCollectionViewController.xib; sourceTree = "<group>"; };
+		79C9B9B51C7DFA7600A4DCF1 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		79D2C17C1C70DFBF00DEA273 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		79D2C17D1C70DFBF00DEA273 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		79D2C1801C70E01A00DEA273 /* PasteboardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardListViewModel.swift; sourceTree = "<group>"; };
@@ -79,7 +82,6 @@
 		79F0A0471C6CD54700F7264F /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A04A1C6CD54700F7264F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F0A04E1C6CD54700F7264F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		79F0A0511C6CD54700F7264F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79F0A0531C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F0A0581C6CD54700F7264F /* PastelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PastelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F0A05E1C6CD54700F7264F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +134,8 @@
 			children = (
 				790AD2281C724DF000431B16 /* TextItemCell.xib */,
 				7955C8851C74DF5900C688E3 /* ImageItemCell.xib */,
+				79C9B9B11C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib */,
+				79C9B9B51C7DFA7600A4DCF1 /* MainMenu.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -202,7 +206,6 @@
 				79D2C17B1C70DF8D00DEA273 /* Pasteboard */,
 				79F0A04A1C6CD54700F7264F /* AppDelegate.swift */,
 				79F0A04E1C6CD54700F7264F /* Assets.xcassets */,
-				79F0A0501C6CD54700F7264F /* Main.storyboard */,
 				79F0A0531C6CD54700F7264F /* Info.plist */,
 			);
 			path = Pastel;
@@ -315,9 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7955C8861C74DF5900C688E3 /* ImageItemCell.xib in Resources */,
+				79C9B9B21C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib in Resources */,
 				79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */,
 				790AD2291C724DF000431B16 /* TextItemCell.xib in Resources */,
-				79F0A0521C6CD54700F7264F /* Main.storyboard in Resources */,
+				79C9B9B61C7DFA7600A4DCF1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,17 +405,6 @@
 			targetProxy = 79F0A0591C6CD54700F7264F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		79F0A0501C6CD54700F7264F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79F0A0511C6CD54700F7264F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		79F0A05F1C6CD54700F7264F /* Debug */ = {
