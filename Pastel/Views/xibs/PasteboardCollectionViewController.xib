@@ -17,25 +17,26 @@
             <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BME-cH-XUA">
+                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BME-cH-XUA">
                     <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
-                    <clipView key="contentView" id="ssl-Da-GVW">
-                        <rect key="frame" x="1" y="1" width="438" height="478"/>
+                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="ssl-Da-GVW">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView id="IRI-xd-1mK">
-                                <rect key="frame" x="0.0" y="0.0" width="438" height="478"/>
+                            <collectionView selectable="YES" id="IRI-xd-1mK">
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="NAw-Xy-yfh">
                                     <size key="itemSize" width="400" height="100"/>
                                 </collectionViewFlowLayout>
-                                <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <color key="primaryBackgroundColor" red="0.94220833150000005" green="0.99404913640000003" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="-2" id="Stg-Oi-CO7"/>
                                     <outlet property="delegate" destination="-2" id="PLJ-rG-SRV"/>
                                 </connections>
                             </collectionView>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="v6t-24-BtV">
                         <rect key="frame" x="1" y="144" width="233" height="15"/>
