@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       return
     }
 
-    button.image = NSImage(named: "StatusBarButtonImage")
+    button.image = NSImage(named: "ClipboardImage")
     button.action = Selector("togglePopover:")
 
     popover.contentViewController = PasteboardCollectionViewController(
