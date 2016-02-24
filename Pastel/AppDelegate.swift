@@ -22,7 +22,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     button.image = NSImage(named: "StatusBarButtonImage")
     button.action = Selector("togglePopover:")
 
-    popover.behavior = NSPopoverBehavior.Semitransient
     popover.contentViewController = PasteboardCollectionViewController(
       nibName: "PasteboardCollectionViewController",
       bundle: nil
