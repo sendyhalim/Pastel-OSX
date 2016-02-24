@@ -14,17 +14,17 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BME-cH-XUA">
-                    <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="480"/>
                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="ssl-Da-GVW">
-                        <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="IRI-xd-1mK">
-                                <rect key="frame" x="0.0" y="0.0" width="440" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="NAw-Xy-yfh">
                                     <size key="itemSize" width="400" height="100"/>
