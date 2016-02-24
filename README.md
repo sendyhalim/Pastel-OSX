@@ -2,6 +2,10 @@
 Based and inspired by [CopyPasta](https://github.com/alltheflow/CopyPasta), but with extra
 chili and sauce.
 
+<img width="412" 
+     alt="Screenshot" 
+     src="https://cloud.githubusercontent.com/assets/3948217/13293263/91840d64-db51-11e5-9ed0-f827465873c9.png">
+
 # Acknowledgements
 Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> 
 from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> 
