@@ -10,12 +10,15 @@ import Cocoa
 import RxSwift
 import Swiftz
 
+///  A service to write/read from clipboard (pasteboard).
 struct PasteboardService {
   let pasteboard = NSPasteboard.generalPasteboard()
   let pasteboardItems = Variable([PasteboardItem]())
   let changeCount = Variable(0)
   let disposeBag = DisposeBag()
 
+  ///  Polls one pasteboard item from the pasteboard
+  ///  then add (prepend) it to `pasteboardItems` Observable.
   func pollPasteboardItems() {
     if changeCount.value == pasteboard.changeCount {
       return
@@ -33,10 +36,23 @@ struct PasteboardService {
     items?.first >>- pasteboardItemType >>- pasteboardItem >>- addPasteboardItem
   }
 
+  ///  Creates a new `PasteboardItem` based on the given `PasteboardItemType`.
+  ///
+  ///  - parameter type: `PasteboardItemType`.
+  ///
+  ///  - returns: PasteboardItem.
   func pasteboardItem(type: PasteboardItemType) -> PasteboardItem {
     return PasteboardItem(type: type)
   }
 
+  ///  Creates an `Optional<PasteboardItemType>`.
+  ///  If the given type is an `NSURL` it will try to create an `NSImage`, if it
+  ///  succeed then it assume the `NSURL` is a `PasteboardItemType.LocalFile`, 
+  ///  otherwise it will guess based on casting.
+  ///
+  ///  - parameter item: `AnyObject`.
+  ///
+  ///  - returns: An `Optional<PasteboardItemType>`.
   func pasteboardItemType(item: AnyObject) -> PasteboardItemType? {
     if let url = item as? NSURL {
       if let image = NSImage(contentsOfURL: url) {
@@ -57,6 +73,9 @@ struct PasteboardService {
     return Optional.None
   }
 
+  ///  Writes the given `PasteboardItem` to system clipboard.
+  ///
+  ///  - parameter item: `PasteboardItem` to be written.
   func addItemToPasteboard(item: PasteboardItem) {
     pasteboard.clearContents()
 
@@ -77,6 +96,9 @@ struct PasteboardService {
     pollPasteboardItems()
   }
 
+  ///  Prepends a `PasteboardItem` to `pasteboardItems` Observable.
+  ///
+  ///  - parameter item: `PasteboardItem` to be prepended.
   private func addPasteboardItem(item: PasteboardItem) {
     pasteboardItems.value = pasteboardItems.value.filter {
       $0 != item
