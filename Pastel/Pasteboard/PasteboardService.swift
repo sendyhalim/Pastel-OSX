@@ -47,7 +47,7 @@ struct PasteboardService {
 
   ///  Creates an `Optional<PasteboardItemType>`.
   ///  If the given type is an `NSURL` it will try to create an `NSImage`, if it
-  ///  succeed then it assume the `NSURL` is a `PasteboardItemType.LocalFile`, 
+  ///  succeed then it assume the `NSURL` is a `PasteboardItemType.LocalFile`,
   ///  otherwise it will guess based on casting.
   ///
   ///  - parameter item: `AnyObject`.

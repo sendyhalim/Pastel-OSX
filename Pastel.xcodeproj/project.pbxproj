@@ -352,8 +352,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/usr/local/bin/carthage copy-frameworks";
-			shellScript = "";
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		79F0A0761C6CDEDB00F7264F /* [Run Script - Swiftlint] Lint */ = {
 			isa = PBXShellScriptBuildPhase;
