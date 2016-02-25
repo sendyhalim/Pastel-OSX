@@ -79,6 +79,10 @@ class PasteboardServiceSpec: QuickSpec {
           service.pollPasteboardItems()
         }
 
+        afterEach {
+          pasteboard.clearContents()
+        }
+
         it("should have 1 PasteboardItem") {
           expect(service.pasteboardItems.value.count) == 2
         }
@@ -86,6 +90,52 @@ class PasteboardServiceSpec: QuickSpec {
         it("should have .Text for both of the PasteboardItemType") {
           expect(service.pasteboardItems.value[0].type) == .Text("ironman")
           expect(service.pasteboardItems.value[1].type) == .Text("wolverine")
+        }
+      }
+    }
+
+    describe(".addItemToPasteboard()") {
+      context("given a PasteboardItem with type .Text") {
+        let service = PasteboardService()
+
+        beforeEach {
+          let item = PasteboardItem(type: .Text("test-item"))
+          service.addItemToPasteboard(item)
+        }
+
+        afterEach {
+          pasteboard.clearContents()
+        }
+
+        it("should have 1 PasteboardItem") {
+          expect(service.pasteboardItems.value.count) == 1
+        }
+
+        it("should have 1 PasteboardItem with type .Text") {
+          expect(service.pasteboardItems.value[0].type) == .Text("test-item")
+        }
+      }
+
+      context("given a PasteboardItem with type .URL") {
+        let service = PasteboardService()
+
+        beforeEach {
+          let url = NSURL(string: "https://cermati.com")!
+          let item = PasteboardItem(type: .URL(url))
+          service.addItemToPasteboard(item)
+        }
+
+        afterEach {
+          pasteboard.clearContents()
+        }
+
+        it("should have 1 PasteboardItem") {
+          expect(service.pasteboardItems.value.count) == 1
+        }
+
+        it("should have 1 PasteboardItem with type .URL") {
+          let expectedUrl = NSURL(string: "https://cermati.com")!
+          expect(service.pasteboardItems.value[0].type) == .URL(expectedUrl)
         }
       }
     }

@@ -26,11 +26,7 @@ struct PasteboardService {
 
     let items = pasteboard.readObjectsForClasses(
       [NSURL.self, NSString.self, NSImage.self],
-      options: [
-        NSPasteboardTypeString: NSNumber(bool: true),
-        NSPasteboardURLReadingFileURLsOnlyKey: NSNumber(bool: true),
-        NSPasteboardURLReadingContentsConformToTypesKey: NSImage.imageTypes()
-      ]
+      options: nil
     )
 
     items?.first >>- pasteboardItemType >>- pasteboardItem >>- addPasteboardItem
