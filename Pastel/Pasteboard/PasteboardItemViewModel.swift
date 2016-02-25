@@ -8,10 +8,12 @@
 
 import Cocoa
 
+///  A view model that represents a `PasteboardItem`.
 struct PasteboardItemViewModel {
   let item: PasteboardItem
   let formatter: NSDateFormatter = NSDateFormatter()
 
+  /// A date string when the `PasteboardItem` was created.
   var createdAt: String {
     return formatter.stringFromDate(item.createdAt)
   }
