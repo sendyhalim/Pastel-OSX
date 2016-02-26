@@ -65,6 +65,10 @@ class PasteboardCollectionViewController: NSViewController {
       .driveNext(constantCall(collectionView.reloadData))
       .addDisposableTo(disposeBag)
   }
+
+  @IBAction func quit(sender: AnyObject) {
+    NSApplication.sharedApplication().terminate(sender)
+  }
 }
 
 
