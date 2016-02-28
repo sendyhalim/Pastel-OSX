@@ -21,7 +21,7 @@
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bez-jc-W1V" userLabel="Text Field">
                     <rect key="frame" x="18" y="41" width="364" height="17"/>
-                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" id="W7V-vT-6jt" userLabel="Text Field Cell">
+                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="left" id="W7V-vT-6jt" userLabel="Text Field Cell">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
