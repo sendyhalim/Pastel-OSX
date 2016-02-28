@@ -14,7 +14,7 @@ import Swiftz
 struct ItemCell {
   static let maxHeight: CGFloat = 200
   static let maxWidth: CGFloat = 364
-  static let minHeight: CGFloat = 115
+  static let minHeight: CGFloat = 130
   static let height = adjustedHeight • heightForItemType
 }
 
