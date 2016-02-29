@@ -9,7 +9,7 @@
             <connections>
                 <outlet property="contentView" destination="y9Y-SG-O8q" id="8JY-RI-RmI"/>
                 <outlet property="settingsButton" destination="ZAF-ZL-ExA" id="ndm-OW-gb7"/>
-                <outlet property="settingsMenu" destination="Yyg-eC-QJf" id="qwl-rm-UQh"/>
+                <outlet property="settingsMenu" destination="Yyg-eC-QJf" id="9yO-IW-wft"/>
                 <outlet property="view" destination="c22-O7-iKe" id="pId-Rx-l2F"/>
             </connections>
         </customObject>
@@ -55,9 +55,12 @@
             <items>
                 <menuItem title="Quit" id="GlT-on-0eX">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quit:" target="-2" id="wOJ-jf-LdR"/>
+                    </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="630.5" y="329.5"/>
+            <point key="canvasLocation" x="654.5" y="334.5"/>
         </menu>
     </objects>
     <resources>

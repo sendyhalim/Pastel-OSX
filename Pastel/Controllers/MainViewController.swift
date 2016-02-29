@@ -39,6 +39,10 @@ class MainViewController: NSViewController {
       }
       .addDisposableTo(disposeBag)
   }
+
+  @IBAction func quit(sender: NSMenuItem) {
+    NSApplication.sharedApplication().terminate(self)
+  }
 }
 
 func + (lhs: CGPoint, rhs: CGPoint) -> CGPoint {
