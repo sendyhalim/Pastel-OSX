@@ -10,9 +10,15 @@ import Cocoa
 
 class MainViewController: NSViewController {
   @IBOutlet weak var contentView: NSView!
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do view setup here.
+
+  let pasteboardCollectionViewController = {
+    return PasteboardCollectionViewController(
+      nibName: "PasteboardCollectionViewController",
+      bundle: nil
+    )!
+  }()
+
+  override func awakeFromNib() {
+    contentView.addSubview(pasteboardCollectionViewController.view)
   }
 }

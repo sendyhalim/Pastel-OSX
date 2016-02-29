@@ -14,11 +14,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="y9Y-SG-O8q">
-                    <rect key="frame" x="0.0" y="20" width="480" height="252"/>
+                    <rect key="frame" x="0.0" y="20" width="400" height="480"/>
                 </customView>
             </subviews>
             <constraints>
@@ -27,6 +27,7 @@
                 <constraint firstItem="y9Y-SG-O8q" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="y7A-me-NYE"/>
                 <constraint firstAttribute="trailing" secondItem="y9Y-SG-O8q" secondAttribute="trailing" id="ySJ-PN-XRf"/>
             </constraints>
+            <point key="canvasLocation" x="286" y="319"/>
         </customView>
     </objects>
 </document>
