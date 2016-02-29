@@ -10,6 +10,7 @@ import Cocoa
 
 class MainViewController: NSViewController {
   @IBOutlet weak var contentView: NSView!
+  @IBOutlet weak var settingsButton: NSButton!
 
   let pasteboardCollectionViewController = {
     return PasteboardCollectionViewController(

@@ -8,26 +8,50 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainViewController" customModule="Pastel" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="y9Y-SG-O8q" id="8JY-RI-RmI"/>
+                <outlet property="settingsButton" destination="ZAF-ZL-ExA" id="ndm-OW-gb7"/>
                 <outlet property="view" destination="c22-O7-iKe" id="pId-Rx-l2F"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="540"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="fgz-SJ-r2T" userLabel="I">
+                    <rect key="frame" x="0.0" y="480" width="400" height="60"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZAF-ZL-ExA">
+                            <rect key="frame" x="348" y="20" width="32" height="19"/>
+                            <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSAdvanced" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="iR6-EW-hSe">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="cellTitle"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ZAF-ZL-ExA" secondAttribute="bottom" constant="20" symbolic="YES" id="Q8d-Zg-p7k"/>
+                        <constraint firstAttribute="trailing" secondItem="ZAF-ZL-ExA" secondAttribute="trailing" constant="20" symbolic="YES" id="zSL-FM-yP2"/>
+                    </constraints>
+                </customView>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="y9Y-SG-O8q">
-                    <rect key="frame" x="0.0" y="20" width="400" height="480"/>
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="480"/>
                 </customView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="y9Y-SG-O8q" secondAttribute="bottom" constant="20" symbolic="YES" id="8q8-4O-Rhz"/>
+                <constraint firstAttribute="bottom" secondItem="y9Y-SG-O8q" secondAttribute="bottom" id="8q8-4O-Rhz"/>
+                <constraint firstItem="y9Y-SG-O8q" firstAttribute="top" secondItem="fgz-SJ-r2T" secondAttribute="bottom" id="EyE-Ic-tPF"/>
+                <constraint firstAttribute="bottom" secondItem="fgz-SJ-r2T" secondAttribute="bottom" constant="480" id="Ku2-M0-rT9"/>
+                <constraint firstItem="fgz-SJ-r2T" firstAttribute="trailing" secondItem="y9Y-SG-O8q" secondAttribute="trailing" id="QWu-MS-PqM"/>
+                <constraint firstItem="fgz-SJ-r2T" firstAttribute="leading" secondItem="y9Y-SG-O8q" secondAttribute="leading" id="UyF-h8-g1x"/>
+                <constraint firstItem="fgz-SJ-r2T" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="XPy-52-aQW"/>
                 <constraint firstItem="y9Y-SG-O8q" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="i7j-Lm-lT7"/>
-                <constraint firstItem="y9Y-SG-O8q" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="y7A-me-NYE"/>
                 <constraint firstAttribute="trailing" secondItem="y9Y-SG-O8q" secondAttribute="trailing" id="ySJ-PN-XRf"/>
             </constraints>
-            <point key="canvasLocation" x="286" y="319"/>
+            <point key="canvasLocation" x="286" y="340"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+    </resources>
 </document>
