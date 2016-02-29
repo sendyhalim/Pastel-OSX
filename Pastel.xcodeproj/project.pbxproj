@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7902508C1C84ABC80031C149 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7902508B1C84ABC80031C149 /* MainView.xib */; };
+		7902508C1C84ABC80031C149 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7902508B1C84ABC80031C149 /* MainViewController.xib */; };
 		7902508E1C84ABF00031C149 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7902508D1C84ABF00031C149 /* MainViewController.swift */; };
 		790AD1E81C721E2C00431B16 /* PasteboardCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AD1E61C721E2C00431B16 /* PasteboardCollectionViewItem.swift */; };
 		790AD21F1C7230FB00431B16 /* PasteboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */; };
@@ -63,7 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7902508B1C84ABC80031C149 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		7902508B1C84ABC80031C149 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		7902508D1C84ABF00031C149 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		790AD1E61C721E2C00431B16 /* PasteboardCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewItem.swift; sourceTree = "<group>"; };
 		790AD21E1C7230FB00431B16 /* PasteboardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewController.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				7955C8851C74DF5900C688E3 /* ImageItemCell.xib */,
 				79C9B9B11C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib */,
 				79C9B9B51C7DFA7600A4DCF1 /* MainMenu.xib */,
-				7902508B1C84ABC80031C149 /* MainView.xib */,
+				7902508B1C84ABC80031C149 /* MainViewController.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -329,7 +329,7 @@
 				7955C8861C74DF5900C688E3 /* ImageItemCell.xib in Resources */,
 				79C9B9B21C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib in Resources */,
 				79F0A04F1C6CD54700F7264F /* Assets.xcassets in Resources */,
-				7902508C1C84ABC80031C149 /* MainView.xib in Resources */,
+				7902508C1C84ABC80031C149 /* MainViewController.xib in Resources */,
 				790AD2291C724DF000431B16 /* TextItemCell.xib in Resources */,
 				79C9B9B61C7DFA7600A4DCF1 /* MainMenu.xib in Resources */,
 			);

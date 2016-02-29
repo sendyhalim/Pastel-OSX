@@ -23,8 +23,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     button.image?.template = true
     button.action = Selector("togglePopover:")
 
-    popover.contentViewController = PasteboardCollectionViewController(
-      nibName: "PasteboardCollectionViewController",
+    popover.contentViewController = MainViewController(
+      nibName: "MainViewController",
       bundle: nil
     )
 
