@@ -22,8 +22,8 @@
                     <rect key="frame" x="0.0" y="480" width="400" height="60"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZAF-ZL-ExA">
-                            <rect key="frame" x="348" y="20" width="32" height="19"/>
-                            <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSAdvanced" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="iR6-EW-hSe">
+                            <rect key="frame" x="361" y="20" width="19" height="19"/>
+                            <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="SettingsIcon" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="iR6-EW-hSe">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="cellTitle"/>
                             </buttonCell>
@@ -52,6 +52,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="SettingsIcon" width="18.885246276855469" height="18.885246276855469"/>
     </resources>
 </document>

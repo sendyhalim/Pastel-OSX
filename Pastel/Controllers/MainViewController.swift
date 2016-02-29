@@ -20,6 +20,7 @@ class MainViewController: NSViewController {
   }()
 
   override func awakeFromNib() {
+    settingsButton.image?.template = true
     contentView.addSubview(pasteboardCollectionViewController.view)
   }
 }
