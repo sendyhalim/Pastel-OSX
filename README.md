@@ -2,9 +2,10 @@
 Based and inspired by [CopyPasta](https://github.com/alltheflow/CopyPasta), but with extra
 chili and sauce.
 
-<img width="412" 
-     alt="Screenshot" 
-     src="https://cloud.githubusercontent.com/assets/3948217/13293263/91840d64-db51-11e5-9ed0-f827465873c9.png">
+<img width="411" 
+     alt="Pastel Screenshot" 
+     src="https://cloud.githubusercontent.com/assets/3948217/13404386/f8505004-df4b-11e5-838b-7bdc9fd28ce3.png">
+
 
 # Acknowledgements
 Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> 
