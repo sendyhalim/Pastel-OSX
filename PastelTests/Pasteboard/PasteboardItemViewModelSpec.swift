@@ -18,7 +18,7 @@ class PasteboardItemViewModelSpec: QuickSpec {
       formatter.dateFormat = "dd MM yyyy"
 
       let item = PasteboardItem(
-        type: .Text("over the rainbow"),
+        content: .Text("over the rainbow"),
         createdAt: formatter.dateFromString("20 01 2016")!
       )
       let vm = PasteboardItemViewModel(item)

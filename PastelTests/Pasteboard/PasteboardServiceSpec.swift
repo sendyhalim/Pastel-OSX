@@ -15,28 +15,28 @@ class PasteboardServiceSpec: QuickSpec {
   override func spec() {
     let pasteboard = NSPasteboard.generalPasteboard()
 
-    describe(".pasteboardItemType()") {
+    describe(".pasteboardItemContent()") {
       let service = PasteboardService()
 
       context("when passed with an NSURL") {
-        it("should return PasteBoardItemType.URL") {
+        it("should return PasteBoardItemContent.URL") {
           let url = NSURL(string: "https://what.dude")!
-          let result = service.pasteboardItemType(url)
+          let result = service.pasteboardItemContent(url)
           expect(result) == .URL(NSURL(string: "https://what.dude")!)
         }
       }
 
       context("when passed with a string") {
         context("that doesn't match a url") {
-          it("should return PasteBoardItemType.Text") {
-            let result = service.pasteboardItemType("yo")
+          it("should return PasteBoardItemContent.Text") {
+            let result = service.pasteboardItemContent("yo")
             expect(result) == .Text("yo")
           }
         }
 
         context("that matches a url") {
-          it("should return PasteBoardItemType.Text") {
-            let result = service.pasteboardItemType("https://boom.shakalaka")
+          it("should return PasteBoardItemContent.Text") {
+            let result = service.pasteboardItemContent("https://boom.shakalaka")
             expect(result) == .Text("https://boom.shakalaka")
           }
         }
@@ -61,8 +61,8 @@ class PasteboardServiceSpec: QuickSpec {
           expect(service.pasteboardItems.value.count) == 1
         }
 
-        it("should have .Text as the PasteboardItemType") {
-          expect(service.pasteboardItems.value[0].type) == .Text("hi there!")
+        it("should have .Text as the PasteboardItemContent") {
+          expect(service.pasteboardItems.value[0].content) == .Text("hi there!")
         }
       }
 
@@ -87,19 +87,19 @@ class PasteboardServiceSpec: QuickSpec {
           expect(service.pasteboardItems.value.count) == 2
         }
 
-        it("should have .Text for both of the PasteboardItemType") {
-          expect(service.pasteboardItems.value[0].type) == .Text("ironman")
-          expect(service.pasteboardItems.value[1].type) == .Text("wolverine")
+        it("should have .Text for both of the PasteboardItemContent") {
+          expect(service.pasteboardItems.value[0].content) == .Text("ironman")
+          expect(service.pasteboardItems.value[1].content) == .Text("wolverine")
         }
       }
     }
 
     describe(".addItemToPasteboard()") {
-      context("given a PasteboardItem with type .Text") {
+      context("given a PasteboardItem with content .Text") {
         let service = PasteboardService()
 
         beforeEach {
-          let item = PasteboardItem(type: .Text("test-item"))
+          let item = PasteboardItem(content: .Text("test-item"))
           service.addItemToPasteboard(item)
         }
 
@@ -111,17 +111,17 @@ class PasteboardServiceSpec: QuickSpec {
           expect(service.pasteboardItems.value.count) == 1
         }
 
-        it("should have 1 PasteboardItem with type .Text") {
-          expect(service.pasteboardItems.value[0].type) == .Text("test-item")
+        it("should have 1 PasteboardItem with content .Text") {
+          expect(service.pasteboardItems.value[0].content) == .Text("test-item")
         }
       }
 
-      context("given a PasteboardItem with type .URL") {
+      context("given a PasteboardItem with content .URL") {
         let service = PasteboardService()
 
         beforeEach {
           let url = NSURL(string: "https://cermati.com")!
-          let item = PasteboardItem(type: .URL(url))
+          let item = PasteboardItem(content: .URL(url))
           service.addItemToPasteboard(item)
         }
 
@@ -133,9 +133,9 @@ class PasteboardServiceSpec: QuickSpec {
           expect(service.pasteboardItems.value.count) == 1
         }
 
-        it("should have 1 PasteboardItem with type .URL") {
+        it("should have 1 PasteboardItem with content .URL") {
           let expectedUrl = NSURL(string: "https://cermati.com")!
-          expect(service.pasteboardItems.value[0].type) == .URL(expectedUrl)
+          expect(service.pasteboardItems.value[0].content) == .URL(expectedUrl)
         }
       }
     }

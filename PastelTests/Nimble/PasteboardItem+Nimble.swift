@@ -9,7 +9,7 @@
 import Nimble
 @testable import Pastel
 
-func equal(expectedValue: PasteboardItemType) -> MatcherFunc<PasteboardItemType> {
+func equal(expectedValue: PasteboardItemContent) -> MatcherFunc<PasteboardItemContent> {
   return MatcherFunc { actualExpression, failureMessage in
     failureMessage.postfixMessage = "equal <\(expectedValue)>"
     return try actualExpression.evaluate()! == expectedValue
@@ -17,8 +17,8 @@ func equal(expectedValue: PasteboardItemType) -> MatcherFunc<PasteboardItemType>
 }
 
 func == (
-  expectation: Expectation<PasteboardItemType>,
-  expectedValue: PasteboardItemType
+  expectation: Expectation<PasteboardItemContent>,
+  expectedValue: PasteboardItemContent
 ) {
   return expectation.to(equal(expectedValue))
 }

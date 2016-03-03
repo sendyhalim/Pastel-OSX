@@ -8,25 +8,25 @@
 
 import Cocoa
 
-indirect enum PasteboardItemType {
+indirect enum PasteboardItemContent {
   case Text(String)
   case URL(NSURL)
   case Image(NSImage)
-  case LocalFile((NSURL, PasteboardItemType))
+  case LocalFile((NSURL, PasteboardItemContent))
 }
 
 struct PasteboardItem {
-  let type: PasteboardItemType
+  let content: PasteboardItemContent
   let createdAt: NSDate
 
 
-  init(type: PasteboardItemType, createdAt: NSDate) {
-    self.type = type
+  init(content: PasteboardItemContent, createdAt: NSDate) {
+    self.content = content
     self.createdAt = createdAt
   }
 
-  init(type: PasteboardItemType) {
-    self.init(type: type, createdAt: NSDate())
+  init(content: PasteboardItemContent) {
+    self.init(content: content, createdAt: NSDate())
   }
 }
 
@@ -46,10 +46,10 @@ extension NSImage {
 }
 
 func == (lhs: PasteboardItem, rhs: PasteboardItem) -> Bool {
-  return lhs.type == rhs.type
+  return lhs.content == rhs.content
 }
 
-func == (lhs: PasteboardItemType, rhs: PasteboardItemType) -> Bool {
+func == (lhs: PasteboardItemContent, rhs: PasteboardItemContent) -> Bool {
   switch (lhs, rhs) {
   case (.Text(let str1), .Text(let str2)):
     return str1 == str2

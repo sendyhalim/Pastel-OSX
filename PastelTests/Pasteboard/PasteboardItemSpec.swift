@@ -14,31 +14,31 @@ import Quick
 
 class PasteboardItemSpec: QuickSpec {
   override func spec() {
-    typealias Type = PasteboardItemType
+    typealias Content = PasteboardItemContent
 
     describe("==") {
-      context("with PasteboardItemType.Text type") {
-        let text = Type.Text("what")
+      context("with PasteboardItemContent.Text") {
+        let text = Content.Text("what")
 
         it("should return true") {
-          expect(text == Type.Text("what")) == true
+          expect(text == Content.Text("what")) == true
         }
 
         it("should return false") {
-          expect(text == Type.Text("wht")) == false
+          expect(text == Content.Text("wht")) == false
         }
       }
 
-      context("with PasteboardItemType.URL type") {
-        let url = Type.URL(NSURL(string: "http://what")!)
+      context("with PasteboardItemContent.URL") {
+        let url = Content.URL(NSURL(string: "http://what")!)
 
         it("should return true") {
-          let result = url == Type.URL(NSURL(string: "http://what")!)
+          let result = url == Content.URL(NSURL(string: "http://what")!)
           expect(result) == true
         }
 
         it("should return false") {
-          let result = url == Type.URL(NSURL(string: "http://whut")!)
+          let result = url == Content.URL(NSURL(string: "http://whut")!)
           expect(result) == false
         }
       }

@@ -29,30 +29,30 @@ struct PasteboardService {
       options: nil
     )
 
-    items?.first >>- pasteboardItemType >>- pasteboardItem >>- addPasteboardItem
+    items?.first >>- pasteboardItemContent >>- pasteboardItem >>- addPasteboardItem
   }
 
-  ///  Creates a new `PasteboardItem` based on the given `PasteboardItemType`.
+  ///  Creates a new `PasteboardItem` based on the given `PasteboardItemContent`.
   ///
-  ///  - parameter type: `PasteboardItemType`.
+  ///  - parameter content: `PasteboardItemContent`.
   ///
   ///  - returns: PasteboardItem.
-  func pasteboardItem(type: PasteboardItemType) -> PasteboardItem {
-    return PasteboardItem(type: type)
+  func pasteboardItem(content: PasteboardItemContent) -> PasteboardItem {
+    return PasteboardItem(content: content)
   }
 
-  ///  Creates an `Optional<PasteboardItemType>`.
-  ///  If the given type is an `NSURL` it will try to create an `NSImage`, if it
-  ///  succeed then it assume the `NSURL` is a `PasteboardItemType.LocalFile`,
+  ///  Creates an `Optional<PasteboardItemContent>`.
+  ///  If the given content is an `NSURL` it will try to create an `NSImage`, if it
+  ///  succeed then it assume the `NSURL` is a `PasteboardItemContent.LocalFile`,
   ///  otherwise it will guess based on casting.
   ///
   ///  - parameter item: `AnyObject`.
   ///
-  ///  - returns: An `Optional<PasteboardItemType>`.
-  func pasteboardItemType(item: AnyObject) -> PasteboardItemType? {
+  ///  - returns: An `Optional<PasteboardItemContent>`.
+  func pasteboardItemContent(item: AnyObject) -> PasteboardItemContent? {
     if let url = item as? NSURL {
       if let image = NSImage(contentsOfURL: url) {
-        return .LocalFile(url, PasteboardItemType.Image(image))
+        return .LocalFile(url, PasteboardItemContent.Image(image))
       }
 
       return .URL(url)
@@ -75,7 +75,7 @@ struct PasteboardService {
   func addItemToPasteboard(item: PasteboardItem) {
     pasteboard.clearContents()
 
-    switch item.type {
+    switch item.content {
     case .URL(let url):
       pasteboard.writeObjects([url])
 
