@@ -52,7 +52,7 @@ struct PasteboardService {
   func pasteboardItemContent(item: AnyObject) -> PasteboardItemContent? {
     if let url = item as? NSURL {
       if let image = NSImage(contentsOfURL: url) {
-        return .LocalFile(url, PasteboardItemContent.Image(image))
+        return .LocalFile(.Image(url, image))
       }
 
       return .URL(url)
@@ -85,7 +85,7 @@ struct PasteboardService {
     case .Image(let image):
       pasteboard.writeObjects([image])
 
-    case .LocalFile(let url, _):
+    case .LocalFile(.Image(let url, _)):
       pasteboard.writeObjects([url])
     }
 

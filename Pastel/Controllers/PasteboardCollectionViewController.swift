@@ -43,8 +43,8 @@ func heightForItemContent(content: PasteboardItemContent) -> CGFloat {
   case .Image(let image):
     return image.size.height
 
-  case .LocalFile(_, let _content):
-    return heightForItemContent(_content)
+  case .LocalFile(.Image(_, let _content)):
+    return heightForItemContent(PasteboardItemContent.Image(_content))
   }
 }
 
@@ -122,8 +122,11 @@ extension PasteboardCollectionViewController: NSCollectionViewDataSource {
       cell.imageView!.image = image
       return cell
 
-    case .LocalFile(let url, let _content):
-      let cell = cellForItemContent(_content, atIndexPath: indexPath)
+    case .LocalFile(.Image(let url, let _content)):
+      let cell = cellForItemContent(
+        PasteboardItemContent.Image(_content),
+        atIndexPath: indexPath
+      )
       cell.view.toolTip = url.path
       return cell
     }
