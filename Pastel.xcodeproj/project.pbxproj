@@ -21,6 +21,7 @@
 		7980E24C1C7C9FD7003095F8 /* Quick.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 7980E2471C7C9FC2003095F8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7980E2511C7CA08E003095F8 /* PasteboardServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980E2501C7CA08E003095F8 /* PasteboardServiceSpec.swift */; };
 		79AFAED61C7CA8A700DF4358 /* PasteboardItem+Nimble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AFAED51C7CA8A700DF4358 /* PasteboardItem+Nimble.swift */; };
+		79C492EF1C989FDC0027FFBE /* CGPoint+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C492EE1C989FDC0027FFBE /* CGPoint+Operators.swift */; };
 		79C9B9B21C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C9B9B11C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib */; };
 		79C9B9B61C7DFA7600A4DCF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C9B9B51C7DFA7600A4DCF1 /* MainMenu.xib */; };
 		79C9B9B81C7E0B0500A4DCF1 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C9B9B71C7E0B0500A4DCF1 /* EventMonitor.swift */; };
@@ -75,6 +76,7 @@
 		7980E2471C7C9FC2003095F8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		7980E2501C7CA08E003095F8 /* PasteboardServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardServiceSpec.swift; sourceTree = "<group>"; };
 		79AFAED51C7CA8A700DF4358 /* PasteboardItem+Nimble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PasteboardItem+Nimble.swift"; sourceTree = "<group>"; };
+		79C492EE1C989FDC0027FFBE /* CGPoint+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Operators.swift"; sourceTree = "<group>"; };
 		79C9B9B11C7DF91100A4DCF1 /* PasteboardCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardCollectionViewController.xib; sourceTree = "<group>"; };
 		79C9B9B51C7DFA7600A4DCF1 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		79C9B9B71C7E0B0500A4DCF1 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				79D2C1831C70E2BD00DEA273 /* Function.swift */,
 				795E57351C7372D900A9EF48 /* String.swift */,
 				79C9B9B71C7E0B0500A4DCF1 /* EventMonitor.swift */,
+				79C492EE1C989FDC0027FFBE /* CGPoint+Operators.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				7902508E1C84ABF00031C149 /* MainViewController.swift in Sources */,
 				79C9B9B81C7E0B0500A4DCF1 /* EventMonitor.swift in Sources */,
 				79D2C1811C70E01A00DEA273 /* PasteboardListViewModel.swift in Sources */,
+				79C492EF1C989FDC0027FFBE /* CGPoint+Operators.swift in Sources */,
 				790AD1E81C721E2C00431B16 /* PasteboardCollectionViewItem.swift in Sources */,
 				790AD21F1C7230FB00431B16 /* PasteboardCollectionViewController.swift in Sources */,
 				79D2C1841C70E2BD00DEA273 /* Function.swift in Sources */,
