@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,6 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var eventMonitor: EventMonitor?
 
   func applicationDidFinishLaunching(aNotification: NSNotification) {
+    // TODO: remove below code, it's just for testing
+    startAtLogin()
+
     guard let button = statusItem.button else {
       return
     }
@@ -63,5 +67,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func closePopover(sender: AnyObject?) {
     popover.performClose(sender)
     eventMonitor?.stop()
+  }
+
+  private func startAtLogin() {
+    let launcherAppIdentifier = "com.sendyhalim.PastelLauncher"
+
+    SMLoginItemSetEnabled(launcherAppIdentifier, true)
+
+    let startedAtLogin = NSWorkspace.sharedWorkspace().runningApplications.reduce(false) {
+      $0 ? $0 : $1.bundleIdentifier == launcherAppIdentifier
+    }
+
+    if startedAtLogin {
+      NSDistributedNotificationCenter.defaultCenter().postNotificationName(
+        "killme",
+        object: NSBundle.mainBundle().bundleIdentifier!
+      )
+    }
   }
 }
