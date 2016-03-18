@@ -17,8 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var eventMonitor: EventMonitor?
 
   func applicationDidFinishLaunching(aNotification: NSNotification) {
-    // TODO: remove below code, it's just for testing
-    startAtLogin()
+    // TODO: We need to do code signing before we register the app to launch at login
+    // startAtLogin()
 
     guard let button = statusItem.button else {
       return
@@ -79,10 +79,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let startedAtLogin = runningApplications.any {
       $0.bundleIdentifier == launcherAppIdentifier
     }
+    print(startedAtLogin)
 
     if startedAtLogin {
       NSDistributedNotificationCenter.defaultCenter().postNotificationName(
-        "killme",
+        "com.sendyhalim.Pastel.killme",
         object: NSBundle.mainBundle().bundleIdentifier!
       )
     }
