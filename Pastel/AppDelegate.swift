@@ -8,6 +8,7 @@
 
 import Cocoa
 import ServiceManagement
+import Swiftz
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -74,8 +75,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     SMLoginItemSetEnabled(launcherAppIdentifier, true)
 
-    let startedAtLogin = NSWorkspace.sharedWorkspace().runningApplications.reduce(false) {
-      $0 ? $0 : $1.bundleIdentifier == launcherAppIdentifier
+    let runningApplications = List(fromArray: NSWorkspace.sharedWorkspace().runningApplications)
+    let startedAtLogin = runningApplications.any {
+      $0.bundleIdentifier == launcherAppIdentifier
     }
 
     if startedAtLogin {
