@@ -39,6 +39,8 @@
 		79F44A5F1C9C55F9005EDA81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F44A5E1C9C55F9005EDA81 /* AppDelegate.swift */; };
 		79F44A611C9C55F9005EDA81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79F44A601C9C55F9005EDA81 /* Assets.xcassets */; };
 		79F44A641C9C55F9005EDA81 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F44A621C9C55F9005EDA81 /* MainMenu.xib */; };
+		79F44A6C1C9C5AF7005EDA81 /* PastelLauncher.app in [Copy Files - PastelLauncer] */ = {isa = PBXBuildFile; fileRef = 79F44A5C1C9C55F8005EDA81 /* PastelLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		79F44A6E1C9C5B4C005EDA81 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79F44A6D1C9C5B4C005EDA81 /* ServiceManagement.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,17 @@
 				7980E24C1C7C9FD7003095F8 /* Quick.framework in Copy Files */,
 			);
 			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79F44A6B1C9C5ABA005EDA81 /* [Copy Files - PastelLauncer] */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				79F44A6C1C9C5AF7005EDA81 /* PastelLauncher.app in [Copy Files - PastelLauncer] */,
+			);
+			name = "[Copy Files - PastelLauncer]";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -105,6 +118,7 @@
 		79F44A651C9C55F9005EDA81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F44A691C9C566B005EDA81 /* Pastel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Pastel.entitlements; sourceTree = "<group>"; };
 		79F44A6A1C9C567A005EDA81 /* PastelLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PastelLauncher.entitlements; sourceTree = "<group>"; };
+		79F44A6D1C9C5B4C005EDA81 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +129,7 @@
 				79F0A0711C6CDCA200F7264F /* RxSwift.framework in Frameworks */,
 				79F0A0701C6CDCA200F7264F /* RxCocoa.framework in Frameworks */,
 				794215911C6F21B900A5AFBB /* Swiftz.framework in Frameworks */,
+				79F44A6E1C9C5B4C005EDA81 /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +271,7 @@
 		79F0A06D1C6CDC9000F7264F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79F44A6D1C9C5B4C005EDA81 /* ServiceManagement.framework */,
 				7980E2461C7C9FC2003095F8 /* Nimble.framework */,
 				7980E2471C7C9FC2003095F8 /* Quick.framework */,
 				794215901C6F21B900A5AFBB /* Swiftz.framework */,
@@ -289,6 +305,7 @@
 				79F0A0451C6CD54700F7264F /* Resources */,
 				79F0A06B1C6CDB9700F7264F /* [Run Script - Carthage] Copy Frameworks */,
 				79F0A0761C6CDEDB00F7264F /* [Run Script - Swiftlint] Lint */,
+				79F44A6B1C9C5ABA005EDA81 /* [Copy Files - PastelLauncer] */,
 			);
 			buildRules = (
 			);
@@ -686,6 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -702,6 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -742,6 +761,7 @@
 				79F44A671C9C55F9005EDA81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
