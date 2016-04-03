@@ -25,6 +25,8 @@ class MainViewController: NSViewController {
   let disposeBag = DisposeBag()
 
   override func awakeFromNib() {
+    super.awakeFromNib()
+
     settingsButton.image?.template = true
     contentView.addSubview(pasteboardCollectionViewController.view)
 

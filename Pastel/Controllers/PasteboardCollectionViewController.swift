@@ -58,6 +58,7 @@ class PasteboardCollectionViewController: NSViewController {
   @IBOutlet weak var collectionView: NSCollectionView!
 
   override func awakeFromNib() {
+    super.awakeFromNib()
     viewModel.startPollingItems()
 
     viewModel
