@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     button.image = NSImage(named: "ClipboardImage")
     button.image?.template = true
-    button.action = Selector("togglePopover:")
+    button.action = #selector(AppDelegate.togglePopover(_:))
 
     popover.contentViewController = MainViewController(
       nibName: "MainViewController",
